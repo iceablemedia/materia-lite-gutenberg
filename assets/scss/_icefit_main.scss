@@ -1,0 +1,683 @@
+/* #Reset (E. Meyers) */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+}
+
+/* #Basics */
+ul,
+ol {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li > ul,
+li > ol {
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for odd Mozilla border & padding issues */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Clearfixing tabs for beautiful stacking */
+ul.tabs::before,
+ul.tabs::after {
+    content: "\0020";
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+ul.tabs::after {
+    clear: both;
+}
+
+ul.tabs {
+    zoom: 1;
+}
+
+form,
+fieldset {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea {
+    background: #ffffff;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 0 20px 0;
+    max-width: 100%;
+    outline: none;
+}
+
+textarea {
+    min-height: 60px;
+}
+
+label,
+legend {
+    display: block;
+}
+
+select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    display: inline;
+}
+
+label span,
+legend span {
+    font-weight: normal;
+}
+
+::-webkit-input-placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+:-moz-placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+::-moz-placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+:-ms-input-placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+sub,
+sup {
+    font-size: xx-small;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+sup {
+    vertical-align: super;
+}
+
+code,
+kbd,
+var {
+    font-family: "Courier new", Courier, Monospace;
+}
+
+del,
+strike {
+    text-decoration: line-through;
+}
+
+ins {
+    text-decoration: underline;
+}
+
+/* #Icefit Responsive Menu */
+#navbar select {
+  display: none;
+  margin: auto;
+}
+
+#icefit-mobile-menu {
+  display: none;
+}
+
+.icefit-mobile-menu-open {
+  display: block;
+  position: absolute;
+  color: #ffffff;
+  font-size: 30px;
+  top: 50%;
+  margin-top: -15px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.icefit-mobile-menu-open i {
+  font-weight: bold;
+}
+
+.icefit-mobile-menu-close {
+  display: block;
+  font-size: 30px;
+  margin: 15px;
+  float: right;
+}
+
+#icefit-mobile-menu > div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background: white;
+  margin-left: -100%;
+  z-index: 9999;
+}
+
+/* Mobile menu interaction w/ admin bar */
+.admin-bar #icefit-mobile-menu > div {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    .admin-bar #icefit-mobile-menu > div {
+        top: 46px;
+    }
+}
+
+#icefit-mobile-menu .search-form {
+  margin: 0 auto;
+  clear: both;
+  width: 160px;
+}
+
+#icefit-mobile-menu ul {
+  clear: both;
+  margin: 0;
+}
+
+#icefit-mobile-menu ul li {
+  margin: 0;
+}
+
+#icefit-mobile-menu ul li a {
+  display: block;
+  color: #333333;
+  border-bottom: 1px solid #eeeeee;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 160%;
+  transition: background 0.5s, color 0.3s;
+}
+
+#icefit-mobile-menu ul li a:hover {
+	color: #ffffff;
+	background: #009688;
+}
+
+#icefit-mobile-menu .menu-item a {
+  font-family: "Roboto", "Noto", "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+#icefit-mobile-menu ul.sub-menu li a {
+  padding-left: 20px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li a {
+  padding-left: 40px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li li a {
+  padding-left: 60px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li li li a {
+  padding-left: 80px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li li li li a {
+  padding-left: 100px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li li li li li a {
+    padding-left: 120px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li li li li li li a {
+    padding-left: 140px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li li li li li li li a {
+    padding-left: 160px;
+}
+
+#icefit-mobile-menu ul.sub-menu li li li li li li li li li a {
+    padding-left: 180px;
+}
+
+/* #Base Grid */
+.container {
+    position: relative;
+    width: 96%;
+    margin: 0 auto;
+    padding: 0;
+    clear: both;
+}
+
+.ie8 .container {
+    overflow: auto;
+}
+
+.ie8 .container > * {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* IE Fix */
+h1.page-title {
+    width: 95.8333333%;
+}
+
+#page-container,
+#index-container,
+#single-container {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sidebar-container {
+    float: right;
+    padding-left: 40px;
+}
+
+#index-container,
+#single-container.with-sidebar {
+    width: 75%;
+    float: left;
+    padding-right: 40px;
+}
+
+.full-width,
+.one-half,
+.one-third,
+.two-thirds,
+.one-fourth,
+.three-fourths {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+}
+
+#page-container > .full-width {
+    width: 95%;
+}
+
+#page-container > .one-half {
+    width: 45%;
+}
+
+#page-container > .one-third {
+    width: 28.3333333333%;
+}
+
+#page-container > .two-thirds {
+    width: 61.6666667%;
+}
+
+#page-container > .one-fourth {
+    width: 20%;
+}
+
+#page-container > .three-fourths {
+    width: 70%;
+}
+
+.with-sidebar #page-container > .full-width {
+    width: 93.0434783%;
+}
+
+.with-sidebar #page-container > .one-half {
+    width: 43.0434782%;
+}
+
+.with-sidebar #page-container > .one-third {
+    width: 26.3768116%;
+}
+
+.with-sidebar #page-container > .two-thirds {
+    width: 59.7101449%;
+}
+
+.with-sidebar #page-container > .one-fourth {
+    width: 18.0434782%;
+}
+
+.with-sidebar #page-container > .three-fourths {
+    width: 68.0434783%;
+}
+
+#page-container > * {
+    margin-left: 2.5% !important;
+    margin-right: 2.5% !important;
+    margin-bottom: 40px;
+    vertical-align: top;
+    float: none;
+}
+
+.with-sidebar #page-container > * {
+    margin-left: 3.47826087% !important;
+    margin-right: 3.47826087% !important;
+}
+
+#page-container > p {
+    margin-bottom: 20px;
+}
+
+#page-container > p:last-child {
+    margin-bottom: 0;
+}
+
+#page-container div h1,
+#page-container div h2,
+#page-container div h3,
+#page-container div h4,
+#page-container div h5,
+#page-container div h6,
+#page-container .page-title {
+    margin-top: 0;
+}
+
+.sidebar-container {
+    width: 20.8333333%;
+    margin-left: 2.08333333% !important;
+    margin-right: 2.08333333% !important;
+    margin-bottom: 20px;
+}
+
+#footer .container > ul.one-third > li,
+#footer .container > ul.one-fourth > li {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Self Clearing Goodness */
+.container::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/* You can use a <br class="clear" /> to clear floated elements */
+.clear {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* #WordPress Core */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter,
+#page-container div.aligncenter {
+    display: block;
+    margin: 5px auto !important;
+}
+
+.alignright {
+    float: right !important;
+    margin: 5px 0 20px 2.08333333%;
+}
+
+.alignleft {
+    float: left !important;
+    margin: 5px 2.08333333% 20px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 5px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 2.08333333%;
+}
+
+a img.alignnone {
+    margin: 5px 2.08333333% 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 2.08333333% 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figure,
+.wp-caption {
+    background: #ffffff;
+    border-color: #f0f0f0;
+    max-width: 95.833333%;
+    /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 2.08333333% 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 2.08333333% 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 2.08333333%;
+}
+
+figure img,
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    width: auto;
+}
+
+figure figcaption,
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 160%;
+    margin: 0;
+    padding: 5px 0.416666667%;
+}
+
+.gallery-caption {
+    font-size: 80%;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+#page-container > .mejs-container.mejs-audio,
+#page-container > .mejs-poster.mejs-layer {
+    width: 96% !important;
+    /* Fix WP media player width */
+}

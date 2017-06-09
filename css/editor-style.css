@@ -1,0 +1,340 @@
+/**
+ *
+ * Materia Lite WordPress Theme by Iceable Themes | https://www.iceablethemes.com
+ *
+ * Copyright 2017 Mathieu Sarrasin - Iceable Media
+ *
+ * Editor Styles
+ *
+ */
+
+@font-face {
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 400;
+ src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v16/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+ unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+ font-family: 'Roboto';
+ font-style: normal;
+ font-weight: 700;
+ src: local('Roboto Bold'), local('Roboto-Bold'), url(http://fonts.gstatic.com/s/roboto/v16/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+ unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+ font-family: 'Roboto';
+ font-style: italic;
+ font-weight: 400;
+ src: local('Roboto Italic'), local('Roboto-Italic'), url(http://fonts.gstatic.com/s/roboto/v16/vSzulfKSK0LLjjfeaxcREhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+ unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+ font-family: 'Roboto';
+ font-style: italic;
+ font-weight: 700;
+ src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url(http://fonts.gstatic.com/s/roboto/v16/t6Nd4cfPRhZP44Q5QAjcCyYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+ unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+body {
+	font-family: Roboto, Noto, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	text-transform: none;
+	letter-spacing: normal;
+	word-spacing: normal;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+	color: rgba(0,0,0,0.87);
+	font-family: Roboto, Noto, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+/* Links */
+a, a:visited {
+	color: #009688;
+	text-decoration: none;
+	outline: 0;
+	transition: all .5s;
+	-moz-transition: all .5s;
+	-webkit-transition: all .5s;
+	-o-transition: all .5s;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+}
+
+p a, p a:visited {
+	line-height: inherit;
+}
+
+/*	Blockquotes  */
+blockquote, blockquote p {
+	font-size: 14px;
+	line-height: 170%;
+	background: #B2DFDB;
+}
+
+blockquote {
+	margin: 0 40px 20px;
+	padding: 1.5em 2em;
+}
+
+blockquote p {
+	margin: 0;
+}
+
+blockquote cite {
+	display: block;
+	font-size: 13px;
+	color: rgba(0,0,0,0.54);
+}
+
+blockquote cite: before {
+	content: "\2014 \0020";
+}
+
+blockquote cite: after {
+	content: "";
+}
+
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited {
+	color: rgba(0,0,0,0.54);
+}
+
+blockquote.center {
+	text-align: center;
+}
+
+blockquote.left {
+	text-align: left;
+}
+
+blockquote.right {
+	text-align: right;
+}
+
+/* Tables */
+th {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	background: #CCC;
+}
+
+tr:nth-child(even) { background: #EEE; }
+
+tr:nth-child(odd) { background: #DDD; }
+
+td { padding: 5px 20px; }
+
+th {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	background: #CCC;
+	text-align: center;
+}
+
+/* Lists */
+
+ul, ol { margin-bottom: 20px; padding: 0; }
+
+ul { list-style: none outside; }
+
+ol { list-style: decimal; margin-left: 40px; }
+
+ul ul,
+ol ul { margin: 4px 0 5px 15px; }
+
+ul ol,
+ol ol { margin: 4px 0 5px 30px; }
+
+ul ul li,
+ul ol li,
+ol ol li,
+ol ul li { margin-bottom: 6px; }
+
+li { line-height: 18px; margin-bottom: 12px; }
+
+li p { line-height: 21px; }
+
+ul > li { margin-left: 40px; list-style: disc; }
+
+ul ul li { margin-left: 0px; }
+
+ul ul > li,
+ol ul > li { margin-left: 10px; }
+
+dl { margin-bottom: 20px; }
+
+dl dt { font-weight: bold; margin-bottom: 5px; }
+
+dl dd { padding-left: 10px; margin-bottom: 10px; }
+
+/* Formatting tags */
+em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+small { font-size: 80%; }
+
+q::before,
+cite::before { content: '"'; }
+
+q::after,
+cite::after { content: '"'; }
+
+q q::before,
+cite cite::before { content: "'"; }
+
+q q::after,
+cite cite::after { content: "'"; }
+
+cite { font-style: italic; border: none; }
+
+address {
+	font-family: 'Courier new', Courier, Monospace;
+	padding: 0 0 20px 20px;
+}
+
+pre {
+	display: block;
+	font-family: 'Courier New', Courier, Monospace;
+	padding: 15px;
+	word-wrap: break-word;
+}
+
+hr{
+	height:0px;
+	margin:5px;
+	border-color:#CCC;
+}
+
+sub { font-size: xx-small; vertical-align: sub; }
+
+sup { font-size: xx-small; vertical-align: super; }
+
+code,
+kbd,
+var { font-family: 'Courier new', Courier, Monospace; }
+
+del,
+strike { text-decoration: line-through; }
+
+ins { text-decoration: underline; }
+
+big { font-weight: bold; }
+
+acronym,
+abbr {
+    border-bottom: .1em dotted;
+    cursor: help;
+}
+
+/* Alignment */
+.alignnone {
+	margin: 5px 20px 20px 0 !important;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px !important;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0 !important;
+}
+
+.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto !important;
+}
+
+/* Images */
+img {
+	max-width: 100%;
+	height: auto;
+}
+@media \0screen {img { width: auto }} /* Prevent image distortion in IE8 */
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.wp-caption {
+	background: #fff;
+	border-color: #f0f0f0;
+	max-width: 96%; /* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+
+.wp-caption.alignnone { margin: 5px 20px 20px 0; }
+
+.wp-caption.alignleft { margin: 5px 20px 20px 0; }
+
+.wp-caption.alignright { margin: 5px 0 20px 20px; }
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+blockquote.center{text-align:center;}
+
+blockquote.left{
+	float:left;
+	text-align:left;
+	max-width:40%;
+}
+
+blockquote.right{
+	float:right;
+	text-align:left;
+	max-width:40%;
+}
+
+hr{
+	height:0px;
+	border-color: rgba(0,0,0,.12);
+	border-style: solid;
+	border-width: 1px 0 0;
+	clear: both;
+	margin: 40px 0;
+	height: 0;
+}
