@@ -1,425 +1,432 @@
+# Copyright (C) 2017 Iceable Media
+# This file is distributed under the GNU General Public License v2 (GPLv2).
 msgid ""
 msgstr ""
-"Project-Id-Version: Materia Lite 1.0\n"
-"POT-Creation-Date: 2017-06-02 12:05+0100\n"
-"PO-Revision-Date: 2017-06-02 12:05+0100\n"
-"Last-Translator: \n"
-"Language-Team: Iceable Themes\n"
-"Language: en_US\n"
+"Project-Id-Version: Materia Lite 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
+"POT-Creation-Date: 2017-06-16 13:27:17+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
-"X-Poedit-Basepath: .\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n;_x\n"
-"X-Poedit-SearchPath-0: ..\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: ../comments.php:17
+#: comments.php:17
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: ../comments.php:23
-#, php-format
+#: comments.php:23
 msgid "One Response to %2$s"
-msgstr ""
+msgid_plural "%1$s Responses to %2$s"
+msgstr[0] ""
+msgstr[1] ""
 
-#: ../comments.php:33
+#: comments.php:33
 msgid "Older comments"
 msgstr ""
 
-#: ../comments.php:36
+#: comments.php:36
 msgid "Newer comments"
 msgstr ""
 
-#: ../comments.php:45
+#: comments.php:45
 msgid "Comments are closed."
 msgstr ""
 
-#: ../footer.php:24
-#, php-format
+#: footer.php:24
 msgid "Copyright &copy; %s %s."
 msgstr ""
 
-#: ../footer.php:26
-#, php-format
+#: footer.php:26
 msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
 msgstr ""
 
-#: ../footer.php:27
+#: footer.php:27
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: ../footer.php:29
+#: footer.php:28
+msgid "Semantic Personal Publishing Platform"
+msgstr ""
+
+#: footer.php:29
 msgid "WordPress"
 msgstr ""
 
-#: ../footer.php:32
-#, php-format
+#: footer.php:32
 msgid "Materia design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
 msgstr ""
 
-#: ../functions.php:85
+#: functions.php:89
 msgid "Default Sidebar"
 msgstr ""
 
-#: ../functions.php:93
+#: functions.php:97
 msgid "Footer"
 msgstr ""
 
-#: ../functions.php:209 ../functions.php:499
+#: functions.php:215 functions.php:505
 msgid "Home"
 msgstr ""
 
-#: ../functions.php:212
+#: functions.php:218
 msgid "Customize this menu now!"
 msgstr ""
 
-#: ../functions.php:258
+#: functions.php:264
 msgid "Read More"
 msgstr ""
 
-#: ../functions.php:302
+#: functions.php:308
 msgid "Previous Posts"
 msgstr ""
 
-#: ../functions.php:305
+#: functions.php:311
 msgid "Next Posts"
 msgstr ""
 
-#: ../functions.php:324
+#: functions.php:330
 msgid "Next Post"
 msgstr ""
 
-#: ../functions.php:330
+#: functions.php:336
 msgid "Previous Post"
 msgstr ""
 
-#: ../functions.php:365
-msgid "Search for:"
-msgstr ""
-
+#: functions.php:394
 #. translators: %s: comment author link
-#: ../functions.php:388
-#, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr ""
 
-#: ../functions.php:397
-#, php-format
-msgid "%s ago"
-msgstr ""
-
-#: ../functions.php:403
+#: functions.php:409
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../functions.php:419
+#: functions.php:425
 msgid "Edit"
 msgstr ""
 
-#: ../functions.php:487
+#: functions.php:493
 msgid "Daily Archives"
 msgstr ""
 
-#: ../functions.php:488
+#: functions.php:494
 msgid "Monthly Archives"
 msgstr ""
 
-#: ../functions.php:489
+#: functions.php:495
 msgid "Yearly Archives"
 msgstr ""
 
-#: ../functions.php:490
+#: functions.php:496
 msgid "Author Archives"
 msgstr ""
 
-#: ../functions.php:491
+#: functions.php:497
 msgid "Blog Archives"
 msgstr ""
 
-#: ../functions.php:492
+#: functions.php:498
 msgid "Search Results"
 msgstr ""
 
-#: ../functions.php:493
+#: functions.php:499
 msgid "404 Error"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:18
-msgid "Background"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:23
-msgid "Logo & Favicon"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:28
-msgid "Logo"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:34
+#: inc/customizer/customizer.php:17
 msgid "Blog Settings"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:39
-msgid "Misc"
+#: inc/customizer/customizer.php:22
+msgid "Mobile"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:44
+#: inc/customizer/customizer.php:27
 msgid "More"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:56
-msgid "Upload your logo"
+#: inc/customizer/customizer.php:38
+msgid "Main Color"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:57
-msgid "If no logo is uploaded, the site title will be displayed instead."
-msgstr ""
-
-#: ../inc/customizer/customizer.php:73
-msgid "Upload a custom favicon"
-msgstr ""
-
-#: ../inc/customizer/customizer.php:74
-msgid ""
-"Set your favicon. 16x16 or 32x32 pixels is recommended. PNG (recommended), "
-"GIF, or ICO."
-msgstr ""
-
-#: ../inc/customizer/customizer.php:90
+#: inc/customizer/customizer.php:53
 msgid "Blog Index Content"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:95
+#: inc/customizer/customizer.php:58
 msgid "Excerpt"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:96
+#: inc/customizer/customizer.php:59
 msgid "Full content"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:110
+#: inc/customizer/customizer.php:73
 msgid "Responsive Mode"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:115 ../inc/customizer/customizer.php:154
-#: ../inc/customizer/customizer.php:173 ../inc/customizer/customizer.php:192
-#: ../inc/customizer/customizer.php:211
+#: inc/customizer/customizer.php:78 inc/customizer/customizer.php:137
+#: inc/customizer/customizer.php:156 inc/customizer/customizer.php:175
+#: inc/customizer/customizer.php:194
 msgid "On"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:116 ../inc/customizer/customizer.php:155
-#: ../inc/customizer/customizer.php:174 ../inc/customizer/customizer.php:193
-#: ../inc/customizer/customizer.php:212
+#: inc/customizer/customizer.php:79 inc/customizer/customizer.php:138
+#: inc/customizer/customizer.php:157 inc/customizer/customizer.php:176
+#: inc/customizer/customizer.php:195
 msgid "Off"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:130
+#: inc/customizer/customizer.php:93
+msgid "Mobile menu"
+msgstr ""
+
+#: inc/customizer/customizer.php:98
+msgid "Mobile drawer"
+msgstr ""
+
+#: inc/customizer/customizer.php:99
+msgid "Dropdown"
+msgstr ""
+
+#: inc/customizer/customizer.php:113
 msgid "Header image display mode"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:135
+#: inc/customizer/customizer.php:118
 msgid "Card"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:136
+#: inc/customizer/customizer.php:119
 msgid "Full Width"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:149
+#: inc/customizer/customizer.php:132
 msgid "Display header on Homepage"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:168
+#: inc/customizer/customizer.php:151
 msgid "Display header on Blog Index"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:187
+#: inc/customizer/customizer.php:170
 msgid "Display header on Single Posts"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:206
+#: inc/customizer/customizer.php:189
 msgid "Display header on Pages"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:225
+#: inc/customizer/customizer.php:208
 msgid "Header Image Heading"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:240
+#: inc/customizer/customizer.php:223
 msgid "Header Image Subheading"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:254
+#: inc/customizer/customizer.php:238
 msgid "Header Image Headings Color"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:268
+#: inc/customizer/customizer.php:252
 msgid "Button 1 Text"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:283
+#: inc/customizer/customizer.php:267
 msgid "Button 1 link"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:298
+#: inc/customizer/customizer.php:282
 msgid "Button 2 Text"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:313
+#: inc/customizer/customizer.php:297
 msgid "Button 2 link"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:329
+#: inc/customizer/customizer.php:313
 msgid "Get Materia Pro"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:330
+#: inc/customizer/customizer.php:314
 msgid ""
 "Unleash the full potential of materia with tons of additional settings, "
 "advanced features and premium support."
 msgstr ""
 
-#: ../inc/customizer/customizer.php:346
+#: inc/customizer/customizer.php:330
 msgid "Materia Lite support forums"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:347
+#: inc/customizer/customizer.php:331
 msgid "Have a question? Need help?"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:363
+#: inc/customizer/customizer.php:347
 msgid "Rate Materia Lite"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:364
+#: inc/customizer/customizer.php:348
 msgid "Like this theme? We'd love to hear your feedback!"
 msgstr ""
 
-#: ../inc/customizer/customizer.php:390
+#: inc/customizer/customizer.php:374
 msgid "Upgrade to materia Pro!"
 msgstr ""
 
-#: ../index.php:51
-#, php-format
+#: index.php:51
 msgid "Posted on %s"
 msgstr ""
 
-#: ../index.php:57 ../single.php:49
-#, php-format
+#: index.php:57 single.php:49
 msgid "View all posts by %s"
 msgstr ""
 
-#: ../index.php:60
-#, php-format
+#: index.php:60
 msgid "by %s"
 msgstr ""
 
-#: ../index.php:69
-#, php-format
+#: index.php:69
 msgid "in %s"
 msgstr ""
 
-#: ../index.php:97
+#: index.php:95
 msgid "Comment"
 msgstr ""
 
-#: ../index.php:97
+#: index.php:95
 msgid "View 1 Comment"
 msgstr ""
 
-#: ../index.php:97
+#: index.php:95
 msgid "View % Comments"
 msgstr ""
 
-#: ../index.php:97
+#: index.php:95
 msgid "Comments Off"
 msgstr ""
 
-#: ../index.php:117 ../single.php:91
-#, php-format
+#: index.php:115 single.php:92
 msgid "Tagged with %s"
 msgstr ""
 
-#: ../index.php:133 ../index.php:140 ../page.php:67 ../single.php:114
+#: index.php:131 index.php:138 page-templates/full-width.php:65 page.php:67
+#: single.php:116
 msgid "Not Found"
 msgstr ""
 
-#: ../index.php:134
-#, php-format
+#: index.php:132
 msgid "Your search for \"%s\" did not return any result."
 msgstr ""
 
-#: ../index.php:135
+#: index.php:133
 msgid "Would you like to try another search ?"
 msgstr ""
 
-#: ../index.php:141 ../page.php:68 ../single.php:115
+#: index.php:139 page-templates/full-width.php:66 page.php:68 single.php:117
 msgid "What you are looking for isn't here..."
 msgstr ""
 
-#: ../page-title.php:22
-msgid "404: Page Not Found"
-msgstr ""
-
-#: ../page-title.php:27
-#, php-format
-msgid "Search Results for \"%s\""
-msgstr ""
-
-#: ../page-title.php:32
-#, php-format
-msgid "Tag: %s"
-msgstr ""
-
-#: ../page-title.php:37
-#, php-format
-msgid "Category: %s"
-msgstr ""
-
-#: ../page-title.php:42
-#, php-format
-msgid "Daily archives: %s"
-msgstr ""
-
-#: ../page-title.php:46
-#, php-format
-msgid "Monthly archives: %s"
-msgstr ""
-
-#: ../page-title.php:50
-#, php-format
-msgid "Yearly archives: %s"
-msgstr ""
-
-#: ../page.php:41 ../single.php:72
+#: page-templates/full-width.php:39 page.php:41 single.php:72
 msgid "Pages:"
 msgstr ""
 
-#: ../page.php:46 ../single.php:77
+#: page-templates/full-width.php:44 page.php:46 single.php:77
 msgid "Next page"
 msgstr ""
 
-#: ../page.php:47 ../single.php:78
+#: page-templates/full-width.php:45 page.php:47 single.php:78
 msgid "Previous page"
 msgstr ""
 
-#: ../sidebar.php:18
+#: page-title.php:22
+msgid "404: Page Not Found"
+msgstr ""
+
+#: page-title.php:27
+msgid "Search Results for \"%s\""
+msgstr ""
+
+#: page-title.php:32
+msgid "Tag: %s"
+msgstr ""
+
+#: page-title.php:37
+msgid "Category: %s"
+msgstr ""
+
+#: page-title.php:42
+msgid "Daily archives: %s"
+msgstr ""
+
+#: page-title.php:46
+msgid "Monthly archives: %s"
+msgstr ""
+
+#: page-title.php:50
+msgid "Yearly archives: %s"
+msgstr ""
+
+#: sidebar.php:18
 msgid "Recent Posts"
 msgstr ""
 
-#: ../sidebar.php:23
+#: sidebar.php:23
 msgid "Archives"
 msgstr ""
 
-#: ../sidebar.php:28
+#: sidebar.php:28
 msgid "Meta"
 msgstr ""
 
-#: ../single.php:52
-#, php-format
+#: single.php:52
 msgid "%s"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Materia Lite"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://www.iceablethemes.com/shop/materia-lite/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A material design inspired WordPress Theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Iceable Media"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.iceablethemes.com"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width Page Template, No Sidebar"
+msgstr ""
+
+#: functions.php:371
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: functions.php:373
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: functions.php:375
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: functions.php:403
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
 msgstr ""

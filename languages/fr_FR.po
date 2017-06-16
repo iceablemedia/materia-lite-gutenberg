@@ -1,0 +1,454 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Materia Lite 1.0.0\n"
+"POT-Creation-Date: 2017-06-16 15:35+0100\n"
+"PO-Revision-Date: 2017-06-16 15:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: Iceable Media\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SearchPathExcluded-0: ../node_modules\n"
+
+#: ../comments.php:17
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Cet article est protégé par un mot de passe. Veuillez entrer le mot de passe "
+"pour voir les commentaires."
+
+#: ../comments.php:23
+#, php-format
+msgid "One Response to %2$s"
+msgstr "Une réponse à %2$s"
+
+#: ../comments.php:33
+msgid "Older comments"
+msgstr "Commentaires précédents"
+
+#: ../comments.php:36
+msgid "Newer comments"
+msgstr "Commentaires suivants"
+
+#: ../comments.php:45
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: ../footer.php:24
+#, php-format
+msgid "Copyright &copy; %s %s."
+msgstr "Copyright &copy; %s %s."
+
+#: ../footer.php:26
+#, php-format
+msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
+msgstr "Fièrement propulsé par <a href=\"%s\" title=\"%s\">%s</a>."
+
+#: ../footer.php:27
+msgid "https://wordpress.org/"
+msgstr "https://fr.wordpress.org/"
+
+#: ../footer.php:29
+msgid "WordPress"
+msgstr "WordPress"
+
+#: ../footer.php:32
+#, php-format
+msgid "Materia design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
+msgstr "Materia design par <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
+
+#: ../functions.php:89
+msgid "Default Sidebar"
+msgstr "Sidebar par défaut"
+
+#: ../functions.php:97
+msgid "Footer"
+msgstr "Pied de page"
+
+#: ../functions.php:215 ../functions.php:505
+msgid "Home"
+msgstr "Accueil"
+
+#: ../functions.php:218
+msgid "Customize this menu now!"
+msgstr "Personnalisez ce menu maintenant !"
+
+#: ../functions.php:264
+msgid "Read More"
+msgstr "Lire la suite"
+
+#: ../functions.php:308
+msgid "Previous Posts"
+msgstr "Articles précédents"
+
+#: ../functions.php:311
+msgid "Next Posts"
+msgstr "Articles suivants"
+
+#: ../functions.php:330
+msgid "Next Post"
+msgstr "Article suivant"
+
+#: ../functions.php:336
+msgid "Previous Post"
+msgstr "Article précédent"
+
+#: ../functions.php:371
+msgid "Search for:"
+msgstr "Rechercher :"
+
+#. translators: %s: comment author link
+#: ../functions.php:394
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">dit:</span>"
+
+#: ../functions.php:403
+#, php-format
+msgid "%s ago"
+msgstr "Il y a %s"
+
+#: ../functions.php:409
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: ../functions.php:425
+msgid "Edit"
+msgstr "Éditer"
+
+#: ../functions.php:493
+msgid "Daily Archives"
+msgstr "Archives journalières"
+
+#: ../functions.php:494
+msgid "Monthly Archives"
+msgstr "Archives mensuelles"
+
+#: ../functions.php:495
+msgid "Yearly Archives"
+msgstr "Archives annuelles"
+
+#: ../functions.php:496
+msgid "Author Archives"
+msgstr "Archives de l'auteur"
+
+#: ../functions.php:497
+msgid "Blog Archives"
+msgstr "Archives du blog"
+
+#: ../functions.php:498
+msgid "Search Results"
+msgstr "Résultat de la Recherche "
+
+#: ../functions.php:499
+msgid "404 Error"
+msgstr "Erreur 404"
+
+#: ../inc/customizer/customizer.php:17
+msgid "Blog Settings"
+msgstr "Configuration du blog"
+
+#: ../inc/customizer/customizer.php:22
+msgid "Mobile"
+msgstr "Mobile"
+
+#: ../inc/customizer/customizer.php:27
+msgid "More"
+msgstr "Plus"
+
+#: ../inc/customizer/customizer.php:38
+msgid "Main Color"
+msgstr "Couleur principale"
+
+#: ../inc/customizer/customizer.php:53
+msgid "Blog Index Content"
+msgstr "Contenu de la page principale du blog"
+
+#: ../inc/customizer/customizer.php:58
+msgid "Excerpt"
+msgstr "Extrait"
+
+#: ../inc/customizer/customizer.php:59
+msgid "Full content"
+msgstr "Contenu complet"
+
+#: ../inc/customizer/customizer.php:73
+msgid "Responsive Mode"
+msgstr "Mode \"Responsive\""
+
+#: ../inc/customizer/customizer.php:78 ../inc/customizer/customizer.php:137
+#: ../inc/customizer/customizer.php:156 ../inc/customizer/customizer.php:175
+#: ../inc/customizer/customizer.php:194
+msgid "On"
+msgstr "On"
+
+#: ../inc/customizer/customizer.php:79 ../inc/customizer/customizer.php:138
+#: ../inc/customizer/customizer.php:157 ../inc/customizer/customizer.php:176
+#: ../inc/customizer/customizer.php:195
+msgid "Off"
+msgstr "Off"
+
+#: ../inc/customizer/customizer.php:93
+msgid "Mobile menu"
+msgstr "Menu mobile"
+
+#: ../inc/customizer/customizer.php:98
+msgid "Mobile drawer"
+msgstr "Menu tiroir mobile"
+
+#: ../inc/customizer/customizer.php:99
+msgid "Dropdown"
+msgstr "Menu déroulant"
+
+#: ../inc/customizer/customizer.php:113
+msgid "Header image display mode"
+msgstr "Mode d'affichage de l'image d'en-tête"
+
+#: ../inc/customizer/customizer.php:118
+msgid "Card"
+msgstr "Carte"
+
+#: ../inc/customizer/customizer.php:119
+msgid "Full Width"
+msgstr "Pleine largeur"
+
+#: ../inc/customizer/customizer.php:132
+msgid "Display header on Homepage"
+msgstr "Afficher l'image d'en-tête personnalisée sur la page d'accueil"
+
+#: ../inc/customizer/customizer.php:151
+msgid "Display header on Blog Index"
+msgstr ""
+"Afficher l'image d'en-tête personnalisée sur la page principale du blog"
+
+#: ../inc/customizer/customizer.php:170
+msgid "Display header on Single Posts"
+msgstr "Afficher l'image d'en-tête personnalisée sur les pages d'articles"
+
+#: ../inc/customizer/customizer.php:189
+msgid "Display header on Pages"
+msgstr "Afficher l'image d'en-tête personnalisée sur les pages"
+
+#: ../inc/customizer/customizer.php:208
+msgid "Header Image Heading"
+msgstr "Gros titre de l'image d'en-tête"
+
+#: ../inc/customizer/customizer.php:223
+msgid "Header Image Subheading"
+msgstr "Sous titre de l'image d'en-tête"
+
+#: ../inc/customizer/customizer.php:238
+msgid "Header Image Headings Color"
+msgstr "Couleur des titres de l'image d'en-tête"
+
+#: ../inc/customizer/customizer.php:252
+msgid "Button 1 Text"
+msgstr "Texte du bouton 1"
+
+#: ../inc/customizer/customizer.php:267
+msgid "Button 1 link"
+msgstr "Lien du bouton 1"
+
+#: ../inc/customizer/customizer.php:282
+msgid "Button 2 Text"
+msgstr "Texte du bouton 2"
+
+#: ../inc/customizer/customizer.php:297
+msgid "Button 2 link"
+msgstr "Lien du bouton 2"
+
+#: ../inc/customizer/customizer.php:313
+msgid "Get Materia Pro"
+msgstr "Obtenir Materia Pro !"
+
+#: ../inc/customizer/customizer.php:314
+msgid ""
+"Unleash the full potential of materia with tons of additional settings, "
+"advanced features and premium support."
+msgstr ""
+"Profitez de tout le potentiel de Materia avec de nombreux paramètres de "
+"configuration, des fonctionnalités avancées et l'accès au forum de support "
+"premium (en anglais uniquement)."
+
+#: ../inc/customizer/customizer.php:330
+msgid "Materia Lite support forums"
+msgstr "Forum d'aide de Materia Lite (en anglais uniquement)"
+
+#: ../inc/customizer/customizer.php:331
+msgid "Have a question? Need help?"
+msgstr "Une question ? Besoin d'aide ?"
+
+#: ../inc/customizer/customizer.php:347
+msgid "Rate Materia Lite"
+msgstr "Notez Materia Lite"
+
+#: ../inc/customizer/customizer.php:348
+msgid "Like this theme? We'd love to hear your feedback!"
+msgstr "Vous aimez ce thème ? Nous serions ravi d'entendre vos avis !"
+
+#: ../inc/customizer/customizer.php:374
+msgid "Upgrade to materia Pro!"
+msgstr "Mettez à jour vers Materia Pro !"
+
+#: ../index.php:51
+#, php-format
+msgid "Posted on %s"
+msgstr "Posté le %s"
+
+#: ../index.php:57 ../single.php:49
+#, php-format
+msgid "View all posts by %s"
+msgstr "Voir tous les articles de %s"
+
+#: ../index.php:60
+#, php-format
+msgid "by %s"
+msgstr "par %s"
+
+#: ../index.php:69
+#, php-format
+msgid "in %s"
+msgstr "dans %s"
+
+#: ../index.php:95
+msgid "Comment"
+msgstr "Commenter"
+
+#: ../index.php:95
+msgid "View 1 Comment"
+msgstr "Voir 1 Commentaire"
+
+#: ../index.php:95
+msgid "View % Comments"
+msgstr "Voir % Commentaires"
+
+#: ../index.php:95
+msgid "Comments Off"
+msgstr "Commentaires Off"
+
+#: ../index.php:115 ../single.php:92
+#, php-format
+msgid "Tagged with %s"
+msgstr "Taggé %s"
+
+#: ../index.php:131 ../index.php:138 ../page-templates/full-width.php:65
+#: ../page.php:67 ../single.php:116
+msgid "Not Found"
+msgstr "Introuvable"
+
+#: ../index.php:132
+#, php-format
+msgid "Your search for \"%s\" did not return any result."
+msgstr "Votre recherche de \"%s\" n'a retourné aucun résultat."
+
+#: ../index.php:133
+msgid "Would you like to try another search ?"
+msgstr "Voulez-vous essayer une nouvelle recherche ?"
+
+#: ../index.php:139 ../page-templates/full-width.php:66 ../page.php:68
+#: ../single.php:117
+msgid "What you are looking for isn't here..."
+msgstr "Ce que vous cherchez n'est pas ici..."
+
+#: ../page-templates/full-width.php:39 ../page.php:41 ../single.php:72
+msgid "Pages:"
+msgstr "Pages :"
+
+#: ../page-templates/full-width.php:44 ../page.php:46 ../single.php:77
+msgid "Next page"
+msgstr "Page suivante"
+
+#: ../page-templates/full-width.php:45 ../page.php:47 ../single.php:78
+msgid "Previous page"
+msgstr "Page précédente"
+
+#: ../page-title.php:22
+msgid "404: Page Not Found"
+msgstr "404: Page Introuvable"
+
+#: ../page-title.php:27
+#, php-format
+msgid "Search Results for \"%s\""
+msgstr "Résultat de la Recherche pour \"%s\""
+
+#: ../page-title.php:32
+#, php-format
+msgid "Tag: %s"
+msgstr "Tag: %s"
+
+#: ../page-title.php:37
+#, php-format
+msgid "Category: %s"
+msgstr "Catégorie : %s"
+
+#: ../page-title.php:42
+#, php-format
+msgid "Daily archives: %s"
+msgstr "Archives journalières : %s"
+
+#: ../page-title.php:46
+#, php-format
+msgid "Monthly archives: %s"
+msgstr "Archives mensuelles : %s"
+
+#: ../page-title.php:50
+#, php-format
+msgid "Yearly archives: %s"
+msgstr "Archives annuelles : %s"
+
+#: ../sidebar.php:18
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+#: ../sidebar.php:23
+msgid "Archives"
+msgstr "Archives"
+
+#: ../sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#: ../single.php:52
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#~ msgid "Page Not Found"
+#~ msgstr "Page Introuvable"
+
+#~ msgid "Maybe a search will help ?"
+#~ msgstr "Peut-être qu'une recherche pourrait vous aider ?"
+
+#~ msgid "Category"
+#~ msgstr "Catégorie"
+
+#~ msgid "Background"
+#~ msgstr "Arrière plan"
+
+#~ msgid "Logo & Favicon"
+#~ msgstr "Logo & Favicon"
+
+#~ msgid "Misc"
+#~ msgstr "Divers"
+
+#~ msgid "Upload your logo"
+#~ msgstr "Transférez votre logo"
+
+#~ msgid "If no logo is uploaded, the site title will be displayed instead."
+#~ msgstr "Si aucun logo n'est défini, le nom de site sera affiché à la place."
+
+#~ msgid "Upload a custom favicon"
+#~ msgstr "Transférez un favicon personnalisé."
+
+#~ msgid ""
+#~ "Set your favicon. 16x16 or 32x32 pixels is recommended. PNG "
+#~ "(recommended), GIF, or ICO."
+#~ msgstr ""
+#~ "Définissez votre favicon. 16x16 ou 32x32 pixels. PNG (recommandé), GIF ou "
+#~ "ICO."

@@ -17,12 +17,12 @@ get_template_part( 'page-title' );
 
 ?><div id="single-container" class="single-container with-sidebar"><?php
 
-  if(have_posts()):
-  while(have_posts()) : the_post();
+  if( have_posts() ):
+  while( have_posts() ) : the_post();
 
   ?><div id="post-<?php the_ID(); ?>" <?php post_class(); ?>><?php
 
-    /* Post thumbnail (Featured Image) */
+    /* Post thumbnail ( Featured Image ) */
     if ( '' != get_the_post_thumbnail() ) :
       ?><div class="thumbnail"><?php
           the_post_thumbnail();
@@ -44,20 +44,20 @@ get_template_part( 'page-title' );
         ?></a></span><?php
 
     		/* Meta: Author */
-    		$author = sprintf( '<a class="fn" href="%1$s" title="%2$s" rel="author"><i class="fa fa-user" aria-hidden="true"></i>%3$s</a>',
+    		$materia_author = sprintf( '<a class="fn" href="%1$s" title="%2$s" rel="author"><i class="fa fa-user" aria-hidden="true"></i>%3$s</a>',
     			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-    			esc_attr( sprintf( __( 'View all posts by %s', 'icefit' ), get_the_author() ) ),
+    			esc_attr( sprintf( __( 'View all posts by %s', 'materia-lite' ), get_the_author() ) ),
     			get_the_author() );
     		?><span class="meta-author author vcard icon-chip link"><?php
-        echo sprintf( __('%s'), $author ); ?></span><?php
+        echo sprintf( __( '%s', 'materia-lite' ), $materia_author ); ?></span><?php
 
         /* Meta: Category */
-        $cats = array();
-        foreach((get_the_category()) as $category):
-          $cats[] = '<span class="meta-category icon-chip link"><a href="' . get_category_link($category->term_id ) . '"><i class="fa fa-tag" aria-hidden="true"></i>' . $category->cat_name . '</a></span>';
+        $materia_cats = array();
+        foreach( ( get_the_category() ) as $materia_category ):
+          $materia_cats[] = '<span class="meta-category icon-chip link"><a href="' . get_category_link( $materia_category->term_id ) . '"><i class="fa fa-tag" aria-hidden="true"></i>' . $materia_category->cat_name . '</a></span>';
         endforeach;
-        $categories = implode('', $cats);
-        echo $categories;
+        $materia_categories = implode( '', $materia_cats );
+        echo $materia_categories;
 
       ?></div><?php // End metadata
 
@@ -68,14 +68,14 @@ get_template_part( 'page-title' );
 
   		?></div><?php
 
-      $materia_link_pages_args = array(
-        'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __('Pages:', 'icefit') . '</span>',
+      $materia_link_pages_args = array( 
+        'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __( 'Pages:', 'materia-lite' ) . '</span>',
         'after'            => '</div>',
         'link_before'      => '<span>',
         'link_after'       => '</span>',
         'next_or_number'   => 'number',
-        'nextpagelink'     => __('Next page', 'icefit'),
-        'previouspagelink' => __('Previous page', 'icefit'),
+        'nextpagelink'     => __( 'Next page', 'materia-lite' ),
+        'previouspagelink' => __( 'Previous page', 'materia-lite' ),
         'pagelink'         => '%',
         'echo'             => 1
       );
@@ -84,14 +84,16 @@ get_template_part( 'page-title' );
     ?></div><?php // end entry-wrap
 
     /* Meta: Tags */
-    ?><div class="entry-footer"><?php
+    if ( has_tag() ):
+      ?><div class="entry-footer"><?php
 
-        echo '<span class="meta-tags">';
-        $tags = get_the_tag_list('', ', ', '');
-        echo sprintf( __('Tagged with %s'), $tags );
-        echo '</span>';
+          echo '<span class="meta-tags">';
+          $materia_tags = get_the_tag_list( '', ', ', '' );
+          echo sprintf( __( 'Tagged with %s', 'materia-lite' ), $materia_tags );
+          echo '</span>';
 
-    ?></div><?php // end entry-footer
+      ?></div><?php // end entry-footer
+    endif;
 
 
     ?></div><?php // end post
@@ -109,10 +111,10 @@ get_template_part( 'page-title' );
 
   endwhile;
 
-  else: // Empty loop (this should never happen!)
+  else: // Empty loop ( this should never happen! )
 
-    ?><h2><?php _e('Not Found', 'icefit'); ?></h2>
-    <p><?php _e('What you are looking for isn\'t here...', 'icefit'); ?></p><?php
+    ?><h2><?php _e( 'Not Found', 'materia-lite' ); ?></h2>
+    <p><?php _e( 'What you are looking for isn\'t here...', 'materia-lite' ); ?></p><?php
 
   endif;
 

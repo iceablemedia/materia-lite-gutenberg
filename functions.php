@@ -26,11 +26,15 @@ function materia_setup(){
 	 * Translations can be added to the /languages directory.
 	 * A .pot template file is included to get you started
 	 */
-	load_theme_textdomain('materia-lite', THEME_DIR . '/languages');
+	load_theme_textdomain( 'materia-lite', THEME_DIR . '/languages' );
 
 	// Content Width
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 856;
+
+	/* Custom logo support */
+	add_theme_support( 'custom-logo' );
+
 
 	/* Feed links support */
 	add_theme_support( 'automatic-feed-links' );
@@ -48,26 +52,26 @@ function materia_setup(){
 
 	/* Custom header support */
 	add_theme_support( 'custom-header',
-						array(	'header-text' => false,
-								'width' => 1280,
-								'height' => 490,
+						array( 	'header-text' => false,
+								'width' => 1920,
+								'height' => 400,
 								'flex-width' => true,
 								'flex-height' => true,
-								)
-					);
+								 )
+					 );
 
 	/* Custom background support */
 	add_theme_support( 'custom-background',
-						array(	'default-color' => 'ededed',
+						array( 	'default-color' => 'ededed',
 								'default-image' => '',
-								)
-					);
+								 )
+					 );
 
   /* Support HTML5 markup for the search forms, comment forms, comment lists, gallery, and caption. */
   add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 
 }
-add_action('after_setup_theme', 'materia_setup');
+add_action( 'after_setup_theme', 'materia_setup' );
 
 /* Adjust $content_width depending on the page being displayed */
 function materia_content_width() {
@@ -86,16 +90,18 @@ function materia_widgets_init() {
 		'id'            => 'sidebar',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-		)
-	);
+		 )
+	 );
 
 	register_sidebar( array(
 		'name'          => __( 'Footer', 'materia-lite' ),
 		'id'            => 'footer-sidebar',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</li>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-		)
-	);
+		 )
+	 );
 }
 add_action( 'widgets_init', 'materia_widgets_init' );
 
@@ -104,9 +110,9 @@ add_action( 'widgets_init', 'materia_widgets_init' );
  */
 function materia_styles() {
 
-	$responsive_mode = get_theme_mod('materia_responsive_mode');
+	$responsive_mode = get_theme_mod( 'materia_responsive_mode' );
 
-	if ($responsive_mode != 'off'):
+	if ( $responsive_mode != 'off' ):
 		$stylesheet = '/css/materia.min.css';
 	else:
 		$stylesheet = '/css/materia-unresponsive.min.css';
@@ -125,7 +131,7 @@ function materia_styles() {
 		// Load font-awesome
 		wp_register_style( 'font-awesome', get_theme_file_uri ( 'css/font-awesome/css/font-awesome.min.css' ), array(), THEME_VERSION );
 
-	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
+	else: // Support for WordPress <4.7 ( to be removed after 4.9 is released )
 
 		/* Child theme support:
 		 * Enqueue child-theme's versions of stylesheet in /css if they exist,
@@ -151,13 +157,13 @@ function materia_styles() {
 	wp_enqueue_style( 'Roboto', "//fonts.googleapis.com/css?family=Roboto:300italic,400italic,500italic,700italic,300,400,500,700&subset=latin,latin-ext", array(), null );
 
 }
-add_action('wp_enqueue_scripts', 'materia_styles');
+add_action( 'wp_enqueue_scripts', 'materia_styles' );
 
 /*
  * Register editor style
  */
 function materia_editor_styles() {
-	add_editor_style('css/editor-style.css');
+	add_editor_style( 'css/editor-style.css' );
 }
 add_action( 'init', 'materia_editor_styles' );
 
@@ -167,36 +173,36 @@ add_action( 'init', 'materia_editor_styles' );
 function materia_scripts() {
 
 	if ( function_exists( 'get_theme_file_uri' ) ): // WordPress 4.7
- 		wp_enqueue_script('materia', get_theme_file_uri( '/js/materia.min.js' ), array('jquery','hoverIntent'), THEME_VERSION );
- 	else: // Support for WordPress <4.7 (to be removed after 4.9 is released)
- 		wp_enqueue_script('materia', THEME_DIR_URI . '/js/materia.min.js', array('jquery','hoverIntent'), THEME_VERSION );
+ 		wp_enqueue_script( 'materia', get_theme_file_uri( '/js/materia.min.js' ), array( 'jquery','hoverIntent' ), THEME_VERSION );
+ 	else: // Support for WordPress <4.7 ( to be removed after 4.9 is released )
+ 		wp_enqueue_script( 'materia', THEME_DIR_URI . '/js/materia.min.js', array( 'jquery','hoverIntent' ), THEME_VERSION );
  	endif;
  	/* Threaded comments support */
  	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
  		wp_enqueue_script( 'comment-reply' );
 }
-add_action('wp_enqueue_scripts', 'materia_scripts');
+add_action( 'wp_enqueue_scripts', 'materia_scripts' );
 
 // Remove hentry class where irrelevant
 function materia_remove_hentry( $classes ) {
 	if ( is_page() ):
-		$classes = array_diff($classes, array('hentry'));
+		$classes = array_diff( $classes, array( 'hentry' ) );
 	endif;
 	return $classes;
 }
-add_filter('post_class','materia_remove_hentry');
+add_filter( 'post_class','materia_remove_hentry' );
 
-// Remove rel="category" in category links (HTML5 invalid)
-function remove_rel_cat( $text ) {
-	$text = str_replace(' rel="category"', "", $text);
-	$text = str_replace(' rel="category tag"', ' rel="tag"', $text);
+// Remove rel="category" in category links ( HTML5 invalid )
+function materia_remove_rel_cat( $text ) {
+	$text = str_replace( ' rel="category"', "", $text );
+	$text = str_replace( ' rel="category tag"', ' rel="tag"', $text );
 	return $text;
 }
-add_filter( 'the_category', 'remove_rel_cat' );
+add_filter( 'the_category', 'materia_remove_rel_cat' );
 
 
 /*
- * Fallback menu (when user has not set a menu yet)
+ * Fallback menu ( when user has not set a menu yet )
  */
 function materia_fallback_menu() {
 
@@ -206,10 +212,10 @@ function materia_fallback_menu() {
 	echo '<nav class="navigation main-nav">
 	<ul id="fallback-menu" class="menu sf-menu">';
 
-	echo '<li class="' . $home_item_class . '"><a href="' . get_home_url() . '">' . __( 'Home', 'icefit') . '</a></li>';
+	echo '<li class="' . $home_item_class . '"><a href="' . get_home_url() . '">' . __( 'Home', 'materia-lite' ) . '</a></li>';
 
 	if ( current_user_can( 'edit_theme_options' ) ):
-		echo '<li class="menu-item"><a href="' . get_admin_url( null, 'nav-menus.php' ) . '">' . __( 'Customize this menu now!', 'icefit') . '</a></li>';
+		echo '<li class="menu-item"><a href="' . get_admin_url( null, 'nav-menus.php' ) . '">' . __( 'Customize this menu now!', 'materia-lite' ) . '</a></li>';
 	endif;
 
 	echo '</ul></nav>';
@@ -228,9 +234,9 @@ add_filter( 'excerpt_more', 'materia_excerpt_more' );
  * Determine whether the current post needs a "read more" link on the blog index page
  */
 function materia_has_readmore_link() {
-	if ( "content" == get_theme_mod('materia_blog_index_content') ):
+	if ( "content" == get_theme_mod( 'materia_blog_index_content' ) ):
 		global $post;
-		if ( ( preg_match('/<!--more(.*?)?-->/', $post->post_content ) || preg_match('/<!--nextpage-->/', $post->post_content ) ) ):
+		if ( ( preg_match( '/<!--more( .*? )?-->/', $post->post_content ) || preg_match( '/<!--nextpage-->/', $post->post_content ) ) ):
 			return true;
 		else:
 			return false;
@@ -250,12 +256,12 @@ function materia_readmore_link( $classes ) {
   // If the index is set to "full content" and a "read more" link is needed,
   // then the <!--more--> quicktag was used. Add an anchor pointing to the more
   // quicktag position to the link.
-	if ( "content" == get_theme_mod('materia_blog_index_content') ):
+	if ( "content" == get_theme_mod( 'materia_blog_index_content' ) ):
 		global $post;
     $link .= '#more-' . $post->ID;
 	endif;
 
-  $more = '<a href="'. $link . '" class="readmore-link '.$classes.'">'. __("Read More", 'icefit') .'</a>';
+  $more = '<a href="'. $link . '" class="readmore-link '.$classes.'">'. __( "Read More", 'materia-lite' ) .'</a>';
 
 	return $more;
 }
@@ -265,15 +271,15 @@ function materia_readmore_link( $classes ) {
  * when the <!--more--> or <!--nextpage--> quicktags are used
  * This new function preserves every features and filters from the original wp_trim_excerpt
  */
-function materia_trim_excerpt($text = '') {
+function materia_trim_excerpt( $text = '' ) {
 	global $post;
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
-		$text = get_the_content('');
+		$text = get_the_content( '' );
 		$text = strip_shortcodes( $text );
-		$text = apply_filters('the_content', $text);
-		$text = str_replace(']]>', ']]&gt;', $text);
-		$excerpt_length = apply_filters('excerpt_length', 55);
+		$text = apply_filters( 'the_content', $text );
+		$text = str_replace( ']]>', ']]&gt;', $text );
+		$excerpt_length = apply_filters( 'excerpt_length', 55 );
 		$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
 		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
 
@@ -281,7 +287,7 @@ function materia_trim_excerpt($text = '') {
 		 * AND the more link has not been added already
 		 * then we add it now
 		 */
-		if ( ( preg_match('/<!--more(.*?)?-->/', $post->post_content ) || preg_match('/<!--nextpage-->/', $post->post_content ) ) && strpos($text,$excerpt_more) === false ) {
+		if ( ( preg_match( '/<!--more( .*? )?-->/', $post->post_content ) || preg_match( '/<!--nextpage-->/', $post->post_content ) ) && strpos( $text,$excerpt_more ) === false ) {
 		 $text .= $excerpt_more;
 		}
 
@@ -290,19 +296,19 @@ function materia_trim_excerpt($text = '') {
 		$text .= $excerpt_more;
 	}
 
-	return apply_filters('materia_trim_excerpt', $text, $raw_excerpt);
+	return apply_filters( 'materia_trim_excerpt', $text, $raw_excerpt );
 }
-remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'materia_trim_excerpt' );
 
-/* Index page nav (for use in index.php) */
+/* Index page nav ( for use in index.php ) */
 function materia_index_page_nav() {
 
   if ( null != get_next_posts_link() ):
-    ?><div class="previous"><?php next_posts_link( __('Previous Posts', 'icefit') ); ?></div><?php
+    ?><div class="previous"><?php next_posts_link( __( 'Previous Posts', 'materia-lite' ) ); ?></div><?php
   endif;
   if ( null != get_previous_posts_link() ):
-    ?><div class="next"><?php previous_posts_link( __('Next Posts', 'icefit') ); ?></div><?php
+    ?><div class="next"><?php previous_posts_link( __( 'Next Posts', 'materia-lite' ) ); ?></div><?php
   endif;
   if ( null != get_next_posts_link() || null != get_previous_posts_link() ):
     ?><br class="clear" /><?php
@@ -311,23 +317,23 @@ function materia_index_page_nav() {
 }
 
 /*
- * Article Nav (Previous/Next post, for use in single.php)
+ * Article Nav ( Previous/Next post, for use in single.php )
  */
 function materia_article_nav(){
 
-	if ("" != get_adjacent_post( false, "", false ) || "" != get_adjacent_post( false, "", true ) ):
+	if ( "" != get_adjacent_post( false, "", false ) || "" != get_adjacent_post( false, "", true ) ):
 
 		echo '<div class="page_nav">';
 
-		if ("" != get_adjacent_post( false, "", false ) ): // Is there a previous post?
+		if ( "" != get_adjacent_post( false, "", false ) ): // Is there a previous post?
 			echo '<div class="next">',
-				next_post_link('%link', __('Next Post', 'icefit') ),
+				next_post_link( '%link', __( 'Next Post', 'materia-lite' ) ),
 				'</div>';
 		endif;
 
-		if ("" != get_adjacent_post( false, "", true ) ): // Is there a next post?
+		if ( "" != get_adjacent_post( false, "", true ) ): // Is there a next post?
 			echo '<div class="previous">',
-				previous_post_link('%link', __('Previous Post', 'icefit') ),
+				previous_post_link( '%link', __( 'Previous Post', 'materia-lite' ) ),
 				'</div>';
 		endif;
 
@@ -341,7 +347,7 @@ function materia_article_nav(){
  */
 function materia_page_has_comments_nav() {
 	global $wp_query;
-	return ($wp_query->max_num_comment_pages > 1);
+	return ( $wp_query->max_num_comment_pages > 1 );
 }
 
 function materia_page_has_next_comments_link() {
@@ -353,7 +359,7 @@ function materia_page_has_next_comments_link() {
 
 function materia_page_has_previous_comments_link() {
 	$cpage = get_query_var( 'cpage' );
-	return ($cpage > 1);
+	return ( $cpage > 1 );
 }
 
 /*
@@ -362,20 +368,20 @@ function materia_page_has_previous_comments_link() {
 function materia_searchform_markup() {
   $form = '<form role="search" method="get" class="search-form" action="' . esc_url( home_url( '/' ) ) . '">
       <label>
-          <span class="screen-reader-text">' . _x( 'Search for:', 'label' ) . '</span>
+          <span class="screen-reader-text">' . _x( 'Search for:', 'label', 'materia-lite' ) . '</span>
           <i class="fa fa-search" aria-hidden="true"></i>
-          <input type="search" class="search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" />
+          <input type="search" class="search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder', 'materia-lite' ) . '" value="' . get_search_query() . '" name="s" />
       </label>
-      <input type="submit" class="search-submit" value="'. esc_attr_x( 'Search', 'submit button' ) .'">
+      <input type="submit" class="search-submit" value="'. esc_attr_x( 'Search', 'submit button', 'materia-lite' ) .'">
   </form>';
   return $form;
 }
-add_filter('get_search_form', 'materia_searchform_markup');
+add_filter( 'get_search_form', 'materia_searchform_markup' );
 
 /*
  * Custom comment markup
  */
-function materia_comment_callback($comment, $args, $depth) {
+function materia_comment_callback( $comment, $args, $depth ) {
   $tag = ( 'div' === $args['style'] ) ? 'div' : 'li';
 ?>
   <<?php echo $tag; ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( !empty( $args['has_children'] ) ? 'parent' : '', $comment ); ?>>
@@ -385,7 +391,7 @@ function materia_comment_callback($comment, $args, $depth) {
           <?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
           <?php
             /* translators: %s: comment author link */
-            printf( __( '%s <span class="says">says:</span>' ),
+            printf( __( '%s <span class="says">says:</span>', 'materia-lite' ),
               sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) )
             );
           ?>
@@ -394,13 +400,13 @@ function materia_comment_callback($comment, $args, $depth) {
         <div class="comment-metadata">
           <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>"><?php
             ?><time datetime="<?php comment_time( 'c' ); ?>"><?php
-              printf( _x( '%s ago', '%s = human-readable time difference', 'icefit' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+              printf( _x( '%s ago', '%s = human-readable time difference', 'materia-lite' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
             ?></time><?php
           ?></a><?php
         ?></div><!-- .comment-metadata -->
 
         <?php if ( '0' == $comment->comment_approved ) : ?>
-        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.' ); ?></p>
+        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'materia-lite' ); ?></p>
         <?php endif; ?>
       </footer><!-- .comment-meta -->
 
@@ -416,23 +422,23 @@ function materia_comment_callback($comment, $args, $depth) {
         'before'    => '<div class="reply">',
         'after'     => '</div>'
       ) ) );
-      edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' );
+      edit_comment_link( __( 'Edit', 'materia-lite' ), '<span class="edit-link">', '</span>' );
       ?>
     </article><!-- .comment-body -->
 <?php
 }
 
 /*
- * Create dropdown menu (for responsive mode)
+ * Create dropdown menu ( for responsive mode )
  */
 function materia_dropdown_nav_menu() {
 	$menu_name = 'primary';
 	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
-		if ($menu = wp_get_nav_menu_object( $locations[ $menu_name ] ) ) {
-		$menu_items = wp_get_nav_menu_items($menu->term_id);
+		if ( $menu = wp_get_nav_menu_object( $locations[ $menu_name ] ) ) {
+		$menu_items = wp_get_nav_menu_items( $menu->term_id );
 		$menu_list = '<select id="dropdown-menu">';
 		$menu_list .= '<option value="">Menu</option>';
-		foreach ( (array) $menu_items as $key => $menu_item ) {
+		foreach ( ( array ) $menu_items as $key => $menu_item ) {
 			$title = $menu_item->title;
 			$url = $menu_item->url;
 			if ( $menu_item->menu_item_parent && $menu_item->menu_item_parent > 0 ):
@@ -456,47 +462,47 @@ function materia_breadcrumbs() {
 	$sep =  '/';
 	$crumbs = '';
 
-	if (!is_front_page()):
+	if ( !is_front_page() ):
 
-		if (is_home()):
+		if ( is_home() ):
 
-			$page_for_posts = get_option('page_for_posts');
-			$crumbs = get_the_title($page_for_posts);
+			$page_for_posts = get_option( 'page_for_posts' );
+			$crumbs = get_the_title( $page_for_posts );
 
-		elseif (is_single()):
+		elseif ( is_single() ):
 
 			// Use categories as breadcrumbs for single posts
 			ob_start();
-			the_category('<span class="separator"> ' . $sep . ' </span>');
+			the_category( '<span class="separator"> ' . $sep . ' </span>' );
 			$crumbs = ob_get_clean();
 
 			$crumbs .= '<span class="separator"> ' . $sep . ' </span>' . get_the_title();
 
-		elseif (is_page()):
-			if($post->post_parent):
+		elseif ( is_page() ):
+			if( $post->post_parent ):
 				$anc = get_post_ancestors( $post->ID );
 				$output = '';
 				foreach ( $anc as $ancestor ):
-					$output = '<a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a><span class="separator"> '.$sep.' </span>' . $output;
+					$output = '<a href="'.get_permalink( $ancestor ).'" title="'.get_the_title( $ancestor ).'">'.get_the_title( $ancestor ).'</a><span class="separator"> '.$sep.' </span>' . $output;
 				endforeach;
 			endif;
 			$crumbs = $output .	get_the_title();
 
-		elseif (is_category()): $crumbs = single_cat_title();
-		elseif (is_tag()): $crumbs = single_tag_title();
-		elseif (is_day()): $crumbs = __('Daily Archives', 'icefit');
-		elseif (is_month()): $crumbs = __('Monthly Archives', 'icefit');
-		elseif (is_year()): $crumbs = __('Yearly Archives', 'icefit');
-		elseif (is_author()): $crumbs = __('Author Archives', 'icefit');
-		elseif (isset($_GET['paged']) && !empty($_GET['paged'])): $crumbs = __('Blog Archives', 'icefit');
-		elseif (is_search()): $crumbs = __('Search Results', 'icefit');
-		elseif (is_404()): $crumbs = __('404 Error', 'icefit');
+		elseif ( is_category() ): $crumbs = single_cat_title();
+		elseif ( is_tag() ): $crumbs = single_tag_title();
+		elseif ( is_day() ): $crumbs = __( 'Daily Archives', 'materia-lite' );
+		elseif ( is_month() ): $crumbs = __( 'Monthly Archives', 'materia-lite' );
+		elseif ( is_year() ): $crumbs = __( 'Yearly Archives', 'materia-lite' );
+		elseif ( is_author() ): $crumbs = __( 'Author Archives', 'materia-lite' );
+		elseif ( isset( $_GET['paged'] ) && !empty( $_GET['paged'] ) ): $crumbs = __( 'Blog Archives', 'materia-lite' );
+		elseif ( is_search() ): $crumbs = __( 'Search Results', 'materia-lite' );
+		elseif ( is_404() ): $crumbs = __( '404 Error', 'materia-lite' );
 
 		endif;
 
 	endif;
 
-	$crumbs = '<a href="' . get_option('home') . '">' . __('Home', 'icefit') . '</a><span class="separator"> ' . $sep . ' </span>' . $crumbs;
+	$crumbs = '<a href="' . home_url() . '">' . __( 'Home', 'materia-lite' ) . '</a><span class="separator"> ' . $sep . ' </span>' . $crumbs;
 
 	echo $crumbs;
 
@@ -510,16 +516,16 @@ function materia_breadcrumbs() {
 require_once 'inc/customizer/customizer.php';
 
 function materia_customizer_css() {
-	$main_color = get_theme_mod('materia_main_color', '#009688');
+	$main_color = get_theme_mod( 'materia_main_color', '#009688' );
 
-	$mainhsl = hex2HSL($main_color);
-	$main_color_dark = HSL2hex($mainhsl[0], $mainhsl[1], 0.82*$mainhsl[2]);
+	$mainhsl = materia_hex2HSL( $main_color );
+	$main_color_dark = materia_HSL2hex( $mainhsl[0], $mainhsl[1], 0.82*$mainhsl[2] );
 	$amount = 50;
-	$light_l = ($mainhsl[2] * 100) + $amount;
-	$light_l = ($light_l > 100) ? 0.95 : $light_l/100;
-	$main_color_light = HSL2hex($mainhsl[0], 0.41, $light_l);
+	$light_l = ( $mainhsl[2] * 100 ) + $amount;
+	$light_l = ( $light_l > 100 ) ? 0.95 : $light_l/100;
+	$main_color_light = materia_HSL2hex( $mainhsl[0], 0.41, $light_l );
 
-	$text_on_main = ( rgb_is_light( $main_color ) ) ? 'rgba(0,0,0,0.87)' : '#ffffff';
+	$text_on_main = ( materia_rgb_is_light( $main_color ) ) ? 'rgba( 0,0,0,0.87 )' : '#ffffff';
 
 	?><style type="text/css" id="materia-customizer">
 	/* $text_on_main ==  <?php echo $text_on_main; ?> */
@@ -537,8 +543,8 @@ function materia_customizer_css() {
 
 		#nav-wrap,
 		#icefit-mobile-menu ul li a:hover,
-		.page_nav .page-numbers.current,
-		#footer {
+		.button.default,
+		.page_nav .page-numbers.current {
 		    background-color: <?php echo $main_color ?>;
 				color: <?php echo $text_on_main ?>;
 		}
@@ -569,6 +575,7 @@ function materia_customizer_css() {
 		    color: <?php echo $main_color_dark ?>;
 		}
 
+		.button.default:hover,
 		input[type="submit"]:hover,
 		button[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -583,10 +590,10 @@ function materia_customizer_css() {
 
 	</style><?php
 }
-add_action( 'wp_head', 'materia_customizer_css');
+add_action( 'wp_head', 'materia_customizer_css' );
 
 // Helper functions for color computing
-function hex2HSL($colour){
+function materia_hex2HSL( $colour ){
 	if ( $colour[0] == '#' ) $colour = substr( $colour, 1 );
 
 	if ( strlen( $colour ) == 6 ):
@@ -610,7 +617,7 @@ function hex2HSL($colour){
 	switch( $max ):
 		case $r:
 			$h = 60 * fmod( ( ( $g - $b ) / $d ), 6 );
-			if ($b > $g) $h += 360;
+			if ( $b > $g ) $h += 360;
 			break;
 		case $g:
 			$h = 60 * ( ( $b - $r ) / $d + 2 );
@@ -623,7 +630,7 @@ function hex2HSL($colour){
 	return array( round( $h, 2 ), round( $s, 2 ), round( $l, 2 ) );
 }
 
-function HSL2hex($h, $s, $l){
+function materia_HSL2hex( $h, $s, $l ){
 	$c = ( 1 - abs( 2 * $l - 1 ) ) * $s;
 	$x = $c * ( 1 - abs( fmod( ( $h / 60 ), 2 ) - 1 ) );
 	$m = $l - ( $c / 2 );
@@ -634,13 +641,13 @@ function HSL2hex($h, $s, $l){
 	else if ( $h < 300 ) { $r = $x; $g = 0; $b = $c; }
 	else { $r = $c; $g = 0; $b = $x; }
 	$r = ( $r + $m ) * 255; $g = ( $g + $m ) * 255; $b = ( $b + $m  ) * 255;
-	$r=dechex($r); $g=dechex($g); $b=dechex($b);
-	if (strlen($r)<2) $r='0'.$r; if (strlen($g)<2) $g='0'.$g; if (strlen($b)<2) $b='0'.$b;
+	$r=dechex( $r ); $g=dechex( $g ); $b=dechex( $b );
+	if ( strlen( $r )<2 ) $r='0'.$r; if ( strlen( $g )<2 ) $g='0'.$g; if ( strlen( $b )<2 ) $b='0'.$b;
     return '#' . $r . $g . $b;;
 }
 
 // Returns true if rgb color is light, false if dark
-function rgb_is_light($colour){
+function materia_rgb_is_light( $colour ){
 	if ( $colour[0] == '#' ) $colour = substr( $colour, 1 );
 
 	if ( strlen( $colour ) == 6 ):
@@ -653,6 +660,6 @@ function rgb_is_light($colour){
 
 	$r = hexdec( $r ); $g = hexdec( $g ); $b = hexdec( $b );
 
-	return (( $r*299 + $g*587 + $b*114 )/1000 > 160);
+	return ( ( $r*299 + $g*587 + $b*114 )/1000 > 160 );
 
 }

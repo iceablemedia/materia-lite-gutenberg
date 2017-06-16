@@ -73,7 +73,6 @@ module.exports = function(grunt) {
      dist: {
       src: [
         'assets/js/materia.js',
-        'assets/js/jquery.hoverIntent.js',
         'assets/js/superfish.js',
       ],
       dest: 'js/materia.dev.js',
@@ -91,7 +90,7 @@ module.exports = function(grunt) {
       target: {
         options: {
           domainPath: '/languages/',
-          potFilename: 'materia-pro.pot',
+          potFilename: 'materia-lite.pot',
           type: 'wp-theme'
         }
       }

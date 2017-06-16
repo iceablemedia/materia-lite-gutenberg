@@ -5,19 +5,17 @@
  *
  * Copyright 2017 Mathieu Sarrasin - Iceable Media
  *
- * Page Template
+ * Template Name: Full-width Page Template, No Sidebar
  *
  */
 
 get_header();
 
-$materia_sidebar_side = get_post_meta( get_the_ID(), 'materia_pagesettings_sidebar_side', true );
-
 ?><main class="container"><?php
 
 get_template_part( 'page-title' );
 
-?><div id="single-container" class="single-container with-sidebar"><?php
+?><div id="single-container" class="single-container"><?php
 
   if( have_posts() ):
   while( have_posts() ) : the_post();
@@ -37,7 +35,7 @@ get_template_part( 'page-title' );
 
   		?></div><?php
 
-      $materia_link_pages_args = array( 
+      $materia_link_pages_args = array(
         'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __( 'Pages:', 'materia-lite' ) . '</span>',
         'after'            => '</div>',
         'link_before'      => '<span>',
@@ -70,10 +68,6 @@ get_template_part( 'page-title' );
   endif;
 
   ?></div><?php // End single container
-
-  ?><div id="sidebar-container"><?php
-    get_sidebar();
-	?></div><?php
 
 ?></main><?php //  End main content
 

@@ -1414,7 +1414,8 @@ textarea {
     line-height: 140%;
     float: right;
     font-family: "Roboto", "Noto", "Helvetica", "Arial", sans-serif;
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: 300;
     color: rgba(0, 0, 0, 0.87);
 }
 
@@ -1785,6 +1786,18 @@ main.container {
     background-color: #ffffff;
 }
 
+.category-description {
+    border-radius: 2px;
+    background: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.category-description p {
+    margin: 0;
+}
+
 /* #single */
 h1.entry-title {
     font-size: 34px;
@@ -1996,6 +2009,10 @@ h1.entry-title {
     margin-top: 0;
 }
 
+.nocomments {
+    padding: 32px;
+}
+
 /* #Sidebar & Widgets */
 #sidebar-container {
     width: 25%;
@@ -2056,6 +2073,25 @@ h1.entry-title {
     display: none;
 }
 
+/* Calendar */
+#wp-calendar {
+    width: 100%;
+}
+
+#wp-calendar td,
+#wp-calendar th {
+    padding: 0;
+    text-align: center;
+}
+
+#wp-calendar #prev {
+    text-align: left;
+}
+
+#wp-calendar #next {
+    text-align: right;
+}
+
 /* #Footer */
 #footer {
     position: relative;
@@ -2065,10 +2101,12 @@ h1.entry-title {
 
 #footer ul {
     margin-bottom: 0;
+    font-size: 0;
 }
 
 #footer .widget {
     width: 25%;
+    font-size: 13px;
     padding-left: 2.08333333%;
     padding-right: 2.08333333%;
     margin: 0;
