@@ -12,7 +12,7 @@
 /* #nav-wrap */
 ?><div id="nav-wrap"><?php
 
-$materia_responsive_menu = get_theme_mod( 'materia_mobile_menu' );
+$materia_responsive_menu = get_theme_mod( 'materia_mobile_menu', 'mobile' );
 
 if ( $materia_responsive_menu == 'mobile' ):
  ?><span class="icefit-mobile-menu-open"><i class="fa fa-bars"></i></span><?php
@@ -20,7 +20,7 @@ endif;
 
 ?><div id="navbar" class="container"><?php
 
-  wp_nav_menu( array( 
+  wp_nav_menu( array(
     'container' => 'nav',
     'container_class' => 'navigation main-nav',
     'theme_location' => 'primary',

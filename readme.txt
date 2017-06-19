@@ -64,6 +64,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.1 =
+June 16th, 2017
+* Fixed: default mobile menu setting
+
 = 1.0.0 =
 June 16th, 2017
 * Initial release
