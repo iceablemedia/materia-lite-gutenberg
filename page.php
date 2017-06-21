@@ -11,8 +11,6 @@
 
 get_header();
 
-$materia_sidebar_side = get_post_meta( get_the_ID(), 'materia_pagesettings_sidebar_side', true );
-
 ?><main class="container"><?php
 
 get_template_part( 'page-title' );
@@ -37,7 +35,7 @@ get_template_part( 'page-title' );
 
   		?></div><?php
 
-      $materia_link_pages_args = array( 
+      $materia_link_pages_args = array(
         'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __( 'Pages:', 'materia-lite' ) . '</span>',
         'after'            => '</div>',
         'link_before'      => '<span>',

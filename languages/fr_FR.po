@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Materia Lite 1.0.0\n"
-"POT-Creation-Date: 2017-06-16 15:35+0100\n"
-"PO-Revision-Date: 2017-06-16 15:35+0100\n"
+"POT-Creation-Date: 2017-06-19 10:37+0100\n"
+"PO-Revision-Date: 2017-06-19 10:37+0100\n"
 "Last-Translator: \n"
 "Language-Team: Iceable Media\n"
 "Language: fr_FR\n"
@@ -16,6 +16,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-SearchPathExcluded-0: ../node_modules\n"
+
+#: ../404.php:24
+msgid "Page Not Found"
+msgstr "Page Introuvable"
+
+#: ../404.php:25 ../index.php:139 ../page-templates/full-width.php:66
+#: ../page.php:66 ../single.php:117
+msgid "What you are looking for isn't here..."
+msgstr "Ce que vous cherchez n'est pas ici..."
+
+#: ../404.php:26
+msgid "Maybe a search will help ?"
+msgstr "Peut-être qu'une recherche pourrait vous aider ?"
 
 #: ../comments.php:17
 msgid "This post is password protected. Enter the password to view comments."
@@ -338,7 +351,7 @@ msgid "Tagged with %s"
 msgstr "Taggé %s"
 
 #: ../index.php:131 ../index.php:138 ../page-templates/full-width.php:65
-#: ../page.php:67 ../single.php:116
+#: ../page.php:65 ../single.php:116
 msgid "Not Found"
 msgstr "Introuvable"
 
@@ -351,20 +364,15 @@ msgstr "Votre recherche de \"%s\" n'a retourné aucun résultat."
 msgid "Would you like to try another search ?"
 msgstr "Voulez-vous essayer une nouvelle recherche ?"
 
-#: ../index.php:139 ../page-templates/full-width.php:66 ../page.php:68
-#: ../single.php:117
-msgid "What you are looking for isn't here..."
-msgstr "Ce que vous cherchez n'est pas ici..."
-
-#: ../page-templates/full-width.php:39 ../page.php:41 ../single.php:72
+#: ../page-templates/full-width.php:39 ../page.php:39 ../single.php:72
 msgid "Pages:"
 msgstr "Pages :"
 
-#: ../page-templates/full-width.php:44 ../page.php:46 ../single.php:77
+#: ../page-templates/full-width.php:44 ../page.php:44 ../single.php:77
 msgid "Next page"
 msgstr "Page suivante"
 
-#: ../page-templates/full-width.php:45 ../page.php:47 ../single.php:78
+#: ../page-templates/full-width.php:45 ../page.php:45 ../single.php:78
 msgid "Previous page"
 msgstr "Page précédente"
 
@@ -418,12 +426,6 @@ msgstr "Meta"
 #, php-format
 msgid "%s"
 msgstr "%s"
-
-#~ msgid "Page Not Found"
-#~ msgstr "Page Introuvable"
-
-#~ msgid "Maybe a search will help ?"
-#~ msgstr "Peut-être qu'une recherche pourrait vous aider ?"
 
 #~ msgid "Category"
 #~ msgstr "Catégorie"

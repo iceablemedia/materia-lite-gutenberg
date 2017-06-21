@@ -65,8 +65,9 @@ Your translation files will be added to the next update. Don't forget to leave y
 == CHANGELOG ==
 
 = 1.0.1 =
-June 16th, 2017
+June 21th, 2017
 * Fixed: default mobile menu setting
+* Added: 404 page template
 
 = 1.0.0 =
 June 16th, 2017
