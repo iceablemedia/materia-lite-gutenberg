@@ -64,6 +64,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.2 =
+June 21th, 2017
+* Fixed: Text domain in 404.php
+
 = 1.0.1 =
 June 21th, 2017
 * Fixed: default mobile menu setting

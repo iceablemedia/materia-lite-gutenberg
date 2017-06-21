@@ -21,9 +21,9 @@
 
        ?><div id="page-container" class="post-content entry-content"><?php
 
-         ?><h2><?php _e('Page Not Found', 'blackoot-lite'); ?></h2><?php
-         ?><p><?php _e('What you are looking for isn\'t here...', 'blackoot-lite'); ?></p><?php
-         ?><p><?php _e('Maybe a search will help ?', 'blackoot-lite'); ?></p><?php
+         ?><h2><?php _e('Page Not Found', 'materia-lite'); ?></h2><?php
+         ?><p><?php _e('What you are looking for isn\'t here...', 'materia-lite'); ?></p><?php
+         ?><p><?php _e('Maybe a search will help ?', 'materia-lite'); ?></p><?php
          ?><p><?php get_search_form(); ?></p><?php
 
    		?></div><?php
