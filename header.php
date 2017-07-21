@@ -21,10 +21,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
-$materia_favicon = get_theme_mod( 'materia_favicon' );
-if ( $materia_favicon ):
-	?><link rel="shortcut icon" href="<?php echo esc_url( $materia_favicon ); ?>" /><?php
-endif;
 // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo THEME_DIR_URI; ?>/js/html5.js" type="text/javascript"></script>
