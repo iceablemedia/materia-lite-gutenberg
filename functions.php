@@ -202,25 +202,47 @@ add_filter( 'the_category', 'materia_remove_rel_cat' );
 
 
 /*
- * Fallback menu ( when user has not set a menu yet )
+ * Fallback menu args filter
  */
-function materia_fallback_menu() {
+function materia_wp_page_menu_args_filter( $args ) {
 
-	$home_item_class = 'menu-item menu-item-home';
-	if ( is_front_page() ) $home_item_class .= ' current-menu-item current_page_item';
+	// Filter wp_page_menu when it is used as a fallback for wp_nav_menu for the main navigation menu
+	if ( isset( $args['fallback_cb'] ) && 'wp_page_menu' === $args['fallback_cb'] ):
 
-	echo '<nav class="navigation main-nav">
-	<ul id="fallback-menu" class="menu sf-menu">';
+		$args['menu_class'] = 'navigation main-nav';
+		return $args;
 
-	echo '<li class="' . $home_item_class . '"><a href="' . get_home_url() . '">' . __( 'Home', 'materia-lite' ) . '</a></li>';
-
-	if ( current_user_can( 'edit_theme_options' ) ):
-		echo '<li class="menu-item"><a href="' . get_admin_url( null, 'nav-menus.php' ) . '">' . __( 'Customize this menu now!', 'materia-lite' ) . '</a></li>';
 	endif;
 
-	echo '</ul></nav>';
+}
+add_filter( 'wp_page_menu_args', 'materia_wp_page_menu_args_filter');
+
+/*
+ * Fallback menu HTML filter
+ */
+function materia_wp_page_menu_html_filter( $menu, $args ) {
+
+	// Filter wp_page_menu when it is used as a fallback for wp_nav_menu
+	if ( isset( $args['fallback_cb'] ) && 'wp_page_menu' === $args['fallback_cb'] ):
+
+		// Add classes to wp_page_menu so it inherits the same styling as wp_nav_menu
+		$menu = str_replace( 'class="navigation main-nav"><ul>', 'class="navigation main-nav"><ul class="menu sf-menu">', $menu );
+		$menu = str_replace( 'class="page_item', 'class="page_item menu-item', $menu );
+		$menu = str_replace( 'page_item_has_children"', 'page_item_has_children menu-item-has-children"', $menu );
+		$menu = str_replace( "class='children", "class='children sub-menu", $menu );
+
+		// Add a hint to "customize this menu" for logged in admin when using the fallback menu (i.e. when user did not set a menu)
+		if ( current_user_can( 'edit_theme_options' ) ):
+			$menu = str_replace( '</ul></nav>', '<li class="menu-item"><a href="' . get_admin_url( null, 'nav-menus.php' ) . '">' . __( 'Customize this menu now!', 'materia-lite' ) . '</a></li></ul>', $menu );
+		endif;
+
+	endif;
+
+	return $menu;
 
 }
+add_filter( 'wp_page_menu', 'materia_wp_page_menu_html_filter', 10, 2);
+
 
 /*
  * Customize "read more" links on index view

@@ -64,6 +64,12 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.4 =
+July 31th, 2017
+* Enhanced: Removed custom fallback for wp_nav_menu
+* Added: Filter the default fallback menu (wp_page_menu) so it inherits correct styles
+* Added: Filter the default fallback menu (wp_page_menu) to show an additional "customize this menu" link (only shown to logged in admin)
+
 = 1.0.3 =
 July 21th, 2017
 * Fixed: Removed unused "materia_favicon" from header.php

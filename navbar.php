@@ -25,7 +25,6 @@ endif;
     'container_class' => 'navigation main-nav',
     'theme_location' => 'primary',
     'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>',
-    'fallback_cb' => 'materia_fallback_menu',
     ) );
  if ( $materia_responsive_menu == 'dropdown' ) materia_dropdown_nav_menu();
  ?></div>
