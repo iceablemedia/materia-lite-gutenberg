@@ -198,110 +198,6 @@ class Materia_Customizer {
 			 )
 		 );
 
-		$wp_customize->add_setting( 'materia_header_image_heading' , array(
-			'default'     => '',
-			'sanitize_callback' => 'materia_sanitize_text',
-		 ) );
-		$wp_customize->add_control(
-			new WP_Customize_Control( $wp_customize, 'materia_header_image_heading',
-				array(
-					'label'		=> __( 'Header Image Heading', 'materia-lite' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'materia_header_image_heading',
-					'type'		=> 'text',
-				 )
-			 )
-		 );
-
-		$wp_customize->add_setting( 'materia_header_image_subheading' , array(
-			'default'     => '',
-			'sanitize_callback' => 'materia_sanitize_text',
-		 ) );
-		$wp_customize->add_control(
-			new WP_Customize_Control( $wp_customize, 'materia_header_image_subheading',
-				array(
-					'label'		=> __( 'Header Image Subheading', 'materia-lite' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'materia_header_image_subheading',
-					'type'		=> 'text',
-				 )
-			 )
-		 );
-
-		$wp_customize->add_setting( 'materia_header_image_headings_color' , array(
-			'default'     => '#ffffff',
-			'sanitize_callback' => 'sanitize_hex_color',
-		 ) );
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control( $wp_customize, 'materia_header_image_headings_color',
-				array(
-					'label'		=> __( 'Header Image Headings Color', 'materia-lite' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'materia_header_image_headings_color',
-				 )
-			 )
-		 );
-
-		$wp_customize->add_setting( 'materia_header_image_button_1_text' , array(
-			'default'     => '',
-			'sanitize_callback' => 'materia_sanitize_text',
-		 ) );
-		$wp_customize->add_control(
-			new WP_Customize_Control( $wp_customize, 'materia_header_image_button_1_text',
-				array(
-					'label'		=> __( 'Button 1 Text', 'materia-lite' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'materia_header_image_button_1_text',
-					'type'		=> 'text',
-				 )
-			 )
-		 );
-
-		$wp_customize->add_setting( 'materia_header_image_button_1_link' , array(
-			'default'     => '',
-			'sanitize_callback' => 'materia_sanitize_text',
-		 ) );
-		$wp_customize->add_control(
-			new WP_Customize_Control( $wp_customize, 'materia_header_image_button_1_link',
-				array(
-					'label'		=> __( 'Button 1 link', 'materia-lite' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'materia_header_image_button_1_link',
-					'type'		=> 'text',
-				 )
-			 )
-		 );
-
-		$wp_customize->add_setting( 'materia_header_image_button_2_text' , array(
-			'default'     => '',
-			'sanitize_callback' => 'materia_sanitize_text',
-		 ) );
-		$wp_customize->add_control(
-			new WP_Customize_Control( $wp_customize, 'materia_header_image_button_2_text',
-				array(
-					'label'		=> __( 'Button 2 Text', 'materia-lite' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'materia_header_image_button_2_text',
-					'type'		=> 'text',
-				 )
-			 )
-		 );
-
-		$wp_customize->add_setting( 'materia_header_image_button_2_link' , array(
-			'default'     => '',
-			'sanitize_callback' => 'materia_sanitize_text',
-		 ) );
-		$wp_customize->add_control(
-			new WP_Customize_Control( $wp_customize, 'materia_header_image_button_2_link',
-				array(
-					'label'		=> __( 'Button 2 link', 'materia-lite' ),
-					'section'	=> 'header_image',
-					'settings'	=> 'materia_header_image_button_2_link',
-					'type'		=> 'text',
-				 )
-			 )
-		 );
-
 		// Setting and control for materia upgrade message
 		$wp_customize->add_setting( 'materia_upgrade', array(
 			'default'	=> 'https://www.iceablethemes.com/shop/materia-pro/',
@@ -433,10 +329,6 @@ function materia_sanitize_mobile_menu( $input ){
 
 function materia_sanitize_button( $input ){
 	return '';
-}
-
-function materia_sanitize_text( $input ){
-	return sanitize_text_field( $input );
 }
 
 ?>

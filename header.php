@@ -79,13 +79,6 @@
 				$materia_header_image_src		= get_header_image();
 				$materia_image_height				= get_custom_header()->height;
 				$materia_image_width				= get_custom_header()->width;
-				$materia_heading						= get_theme_mod( 'materia_header_image_heading' );
-				$materia_subheading					= get_theme_mod( 'materia_header_image_subheading' );
-				$materia_headings_color			= get_theme_mod( 'materia_header_image_headings_color', '#ffffff' );
-				$materia_link_1_text				= get_theme_mod( 'materia_header_image_button_1_text' );
-				$materia_link_1_url					= get_theme_mod( 'materia_header_image_button_1_link' );
-				$materia_link_2_text				= get_theme_mod( 'materia_header_image_button_2_text' );
-				$materia_link_2_url					= get_theme_mod( 'materia_header_image_button_2_link' );
 			endif;
 		endif;
 
@@ -100,22 +93,6 @@
 
 	  		if ( $materia_display_mode == 'card' ) :
 	  			?><img class="cards" src="<?php echo $materia_header_image_src; ?>" height="<?php echo $materia_image_height; ?>" width="<?php echo $materia_image_width; ?>" alt="" /><?php
-	  		endif;
-
-	  		if ( $materia_heading || $materia_subheading || $materia_link_1_text || $materia_link_2_text ):
-	  			?><div class="head-img-content"><?php
-	  				if ( $materia_heading ):
-	  					?><div class="head-img-heading" style="color: <?php echo $materia_headings_color; ?>"><?php echo $materia_heading; ?></div><?php
-	  				endif;
-	  				if ( $materia_subheading ):
-	  					?><div class="head-img-subheading" style="color: <?php echo $materia_headings_color; ?>"><?php echo $materia_subheading; ?></div><?php
-	  				endif;
-	  				$materia_button_1 = ( $materia_link_1_text ) ? '<a class="button raised-button button-flat" href="'.$materia_link_1_url.'">'.$materia_link_1_text.'</a>' : '';
-	  				$materia_button_2 = ( $materia_link_2_text ) ? '<a class="button raised-button default" href="'.$materia_link_2_url.'">'.$materia_link_2_text.'</a>' : '';
-	  				if ( $materia_button_1 || $materia_button_2 ):
-	  					?><div class="head-img-button-wrap"><?php echo $materia_button_1, $materia_button_2; ?></div><?php
-	  				endif;
-	  			?></div><?php
 	  		endif;
 
 	  	?></div><?php

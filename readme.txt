@@ -68,11 +68,13 @@ July 31th, 2017
 * Enhanced: Removed custom fallback for wp_nav_menu
 * Added: Filter the default fallback menu (wp_page_menu) so it inherits correct styles
 * Added: Filter the default fallback menu (wp_page_menu) to show an additional "customize this menu" link (only shown to logged in admin)
+* Enhanced: Mobile menu now works with default fallback menu (when no menu is selected)
 * Enhanced: Removed default sidebar widgets and replaced with a link to widget customization (only shown to logged in admin)
 * Fixed: Floats clearing in single posts
-* Enhanced: Mobile menu now works with default fallback menu (when no menu is selected)
 * Added: Default styling and column support for gallery
 * Fixed: Removed metadata for pages in search results
+* Fixed: Custom post type display in search results
+* Removed: text fields from customizer (wordpress.org guidelines - content creation)
 
 = 1.0.3 =
 July 21th, 2017
