@@ -72,6 +72,7 @@ July 31th, 2017
 * Fixed: Floats clearing in single posts
 * Enhanced: Mobile menu now works with default fallback menu (when no menu is selected)
 * Added: Default styling and column support for gallery
+* Fixed: Removed metadata for pages in search results
 
 = 1.0.3 =
 July 21th, 2017

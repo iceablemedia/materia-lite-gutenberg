@@ -44,33 +44,36 @@ $materia_blog_sidebar_side = 'right';
     		the_title();
     	?></a></h3><?php
 
-      ?><div class="entry-meta"><?php
+      if ( get_post_type() == 'post' ):
 
-    		/* Meta: Date */
-    		?><span class="meta-date post-date updated"><?php
-    			echo sprintf( __( 'Posted on %s', 'materia-lite' ), '<a href="'.  get_permalink() . '" title="<?php the_title(); ?>" rel="bookmark">' . get_the_time( get_option( 'date_format' ) ) . '</a>' );
-        ?></span><?php
+        ?><div class="entry-meta"><?php
 
-    		/* Meta: Author */
-    		$materia_author = sprintf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>',
-    			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-    			esc_attr( sprintf( __( 'View all posts by %s', 'materia-lite' ), get_the_author() ) ),
-    			get_the_author() );
-    		?><span class="meta-author author vcard"><?php
-          echo sprintf( __( 'by %s', 'materia-lite' ), $materia_author ); ?></span><?php
+      		/* Meta: Date */
+      		?><span class="meta-date post-date updated"><?php
+      			echo sprintf( __( 'Posted on %s', 'materia-lite' ), '<a href="'.  get_permalink() . '" title="<?php the_title(); ?>" rel="bookmark">' . get_the_time( get_option( 'date_format' ) ) . '</a>' );
+          ?></span><?php
 
-        /* Meta: Category */
-        echo '<span class="meta-category">';
-        $materia_cats = array();
-        foreach( ( get_the_category() ) as $materia_category ):
-          $materia_cats[] = '<a href="' . get_category_link( $materia_category->term_id ) . '">' . $materia_category->cat_name . '</a>';
-        endforeach;
-        $materia_categories = implode( ', ', $materia_cats );
-        echo sprintf( __( 'in %s', 'materia-lite' ), $materia_categories );
-        echo '</span>';
+      		/* Meta: Author */
+      		$materia_author = sprintf( '<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>',
+      			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+      			esc_attr( sprintf( __( 'View all posts by %s', 'materia-lite' ), get_the_author() ) ),
+      			get_the_author() );
+      		?><span class="meta-author author vcard"><?php
+            echo sprintf( __( 'by %s', 'materia-lite' ), $materia_author ); ?></span><?php
 
-      ?></div><?php // End .entry-meta
+          /* Meta: Category */
+          echo '<span class="meta-category">';
+          $materia_cats = array();
+          foreach( ( get_the_category() ) as $materia_category ):
+            $materia_cats[] = '<a href="' . get_category_link( $materia_category->term_id ) . '">' . $materia_category->cat_name . '</a>';
+          endforeach;
+          $materia_categories = implode( ', ', $materia_cats );
+          echo sprintf( __( 'in %s', 'materia-lite' ), $materia_categories );
+          echo '</span>';
 
+        ?></div><?php // End .entry-meta
+
+      endif;
 
       if ( get_post_format() || post_password_required()
   				|| "content" == get_theme_mod( 'materia_blog_index_content' ) ):
