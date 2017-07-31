@@ -11,26 +11,12 @@
 
 ?><ul id="sidebar" class="sidebar"><?php
 
-	if ( ! dynamic_sidebar( 'sidebar' ) ):
+	if ( ! dynamic_sidebar( 'sidebar' ) && current_user_can( 'edit_theme_options' ) ):
 
-	?>
-	<li id="recent" class="widget">
-		<h3 class="widget-title"><?php _e( 'Recent Posts', 'materia-lite' ); ?></h3>
-		<ul><?php wp_get_archives( 'type=postbypost&limit=5' ); ?></ul>
+	?><li id="customize-sidebar" class="widget">
+		<h3 class="widget-title"><?php _e( 'Add some widgets', 'materia-lite' ); ?></h3>
+		<div><a href="<?php echo get_admin_url( null, 'widgets.php' ) ?>"><?php _e( 'Click here to add widgets to your sidebar!', 'materia-lite' ); ?></a></div>
 	</li>
 
-	<li id="archives" class="widget">
-	<h3 class="widget-title"><?php _e( 'Archives', 'materia-lite' ); ?></h3>
-	<ul><?php wp_get_archives( 'type=monthly' ); ?></ul>
-	</li>
-
-	<li id="meta" class="widget">
-	<h3 class="widget-title"><?php _e( 'Meta', 'materia-lite' ); ?></h3>
-	<ul>
-		<?php wp_register(); ?>
-		<li><?php wp_loginout(); ?></li>
-		<?php wp_meta(); ?>
-	</ul>
-	</li>
 	<?php endif; ?>
 </ul>

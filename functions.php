@@ -208,11 +208,10 @@ function materia_wp_page_menu_args_filter( $args ) {
 
 	// Filter wp_page_menu when it is used as a fallback for wp_nav_menu for the main navigation menu
 	if ( isset( $args['fallback_cb'] ) && 'wp_page_menu' === $args['fallback_cb'] ):
-
 		$args['menu_class'] = 'navigation main-nav';
-		return $args;
-
 	endif;
+
+	return $args;
 
 }
 add_filter( 'wp_page_menu_args', 'materia_wp_page_menu_args_filter');
