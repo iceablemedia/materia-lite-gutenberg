@@ -411,8 +411,7 @@ function materia_comment_callback( $comment, $args, $depth ) {
         <div class="comment-author vcard">
           <?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
           <?php
-            /* translators: %s: comment author link */
-            printf( __( '%s <span class="says">says:</span>', 'materia-lite' ),
+            printf( _x( '%s <span class="says">says:</span>', '%s = comment author link', 'materia-lite' ),
               sprintf( '<b class="fn">%s</b>', get_comment_author_link( $comment ) )
             );
           ?>
