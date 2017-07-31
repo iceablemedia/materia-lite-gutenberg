@@ -71,6 +71,7 @@ July 31th, 2017
 * Enhanced: Removed default sidebar widgets and replaced with a link to widget customization (only shown to logged in admin)
 * Fixed: Floats clearing in single posts
 * Enhanced: Mobile menu now works with default fallback menu (when no menu is selected)
+* Added: Default styling and column support for gallery
 
 = 1.0.3 =
 July 21th, 2017
