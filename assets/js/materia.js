@@ -30,17 +30,19 @@ jQuery(document).ready(function($){
 	});
 
 	/*--- Responsive Mobile Menu ---*/
-	jQuery('.icefit-mobile-menu-open').click(function() {
-		jQuery( '#icefit-mobile-menu' ).show();
-		jQuery( '#icefit-mobile-menu > div' ).animate({ "margin-left": "0" }, 300, function(){
-			jQuery("head").append('<style id="mobile-menu" type="text/css">#main-wrap > *, #main-wrap #header-wrap > * {display:none} #main-wrap #header-wrap, #main-wrap #header-wrap #icefit-mobile-menu { display: block }</style>');
+	$('.icefit-mobile-menu-close, #icefit-mobile-menu .search-form').prependTo('#icefit-mobile-menu .main-nav');
+
+	$('.icefit-mobile-menu-open').click(function() {
+		$( '#icefit-mobile-menu' ).show();
+		$( '#icefit-mobile-menu > div' ).animate({ "margin-left": "0" }, 300, function(){
+			$("head").append('<style id="mobile-menu" type="text/css">#main-wrap > *, #main-wrap #header-wrap > * {display:none} #main-wrap #header-wrap, #main-wrap #header-wrap #icefit-mobile-menu { display: block }</style>');
 		});
 	});
 
-	jQuery('.icefit-mobile-menu-close').click(function() {
-		jQuery('head #mobile-menu').remove();
-		jQuery( '#icefit-mobile-menu > div' ).animate({ "margin-left": "-100%" }, 300).promise().done(function(){
-			jQuery( '#icefit-mobile-menu' ).hide();
+	$('.icefit-mobile-menu-close').click(function() {
+		$('head #mobile-menu').remove();
+		$( '#icefit-mobile-menu > div' ).animate({ "margin-left": "-100%" }, 300).promise().done(function(){
+			$( '#icefit-mobile-menu' ).hide();
 		});
 
 	});

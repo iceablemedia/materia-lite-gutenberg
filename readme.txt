@@ -14,7 +14,6 @@ Materia Lite requires WordPress 4.5 or greater to function properly.
 
 * Once you activate the theme from your WordPress admin panel, you can visit the "Customize" page to quickly and easily upload your own logo and set a few other options.
 * If you will be using a custom header image, you can also optionally choose to enable or disable it on your homepage, blog index pages, single post pages and individual pages.
-* It is highly recommended to set a menu (in appearance > menu) instead of relying on the default fallback menu. Doing so will automatically activate the dropdown version of your menu in responsive mode.
 * You can also set a custom menu to appear at the bottom right of your site. Note this footer menu doesn't support sub-menus, only top-level menu items will be displayed.
 
 Additional documentation and free support forums can be found at https://www.iceablethemes.com under "support".
@@ -71,6 +70,7 @@ July 31th, 2017
 * Added: Filter the default fallback menu (wp_page_menu) to show an additional "customize this menu" link (only shown to logged in admin)
 * Enhanced: Removed default sidebar widgets and replaced with a link to widget customization (only shown to logged in admin)
 * Fixed: Floats clearing in single posts
+* Enhanced: Mobile menu now works with default fallback menu (when no menu is selected)
 
 = 1.0.3 =
 July 21th, 2017

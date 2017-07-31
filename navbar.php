@@ -33,7 +33,7 @@ endif;
 
 if ( $materia_responsive_menu == 'mobile' ):
   ?><div id="icefit-mobile-menu"><?php
-        $materia_before_mobile_menu = '<span class="icefit-mobile-menu-close"><i class="fa fa-times-circle"></i></span>' . get_search_form( false );
-        wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => $materia_before_mobile_menu . '<ul id="%1$s" class="%2$s">%3$s</ul>', ) );
+        echo '<span class="icefit-mobile-menu-close"><i class="fa fa-times-circle"></i></span>' . get_search_form( false );
+        wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', ) );
     ?></div><?php
   endif;
