@@ -712,6 +712,7 @@ figure figcaption,
 
 .cards,
 #navbar .sub-menu,
+.hentry,
 .post,
 .type-page,
 .comments,
@@ -1664,7 +1665,8 @@ main.container {
 
 /* #Index */
 .post,
-.type-page {
+.type-page,
+.hentry {
     background: #ffffff;
     margin-bottom: 40px;
 }
