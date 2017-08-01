@@ -14,6 +14,7 @@ Materia Lite requires WordPress 4.5 or greater to function properly.
 
 * Once you activate the theme from your WordPress admin panel, you can visit the "Customize" page to quickly and easily upload your own logo and set a few other options.
 * If you will be using a custom header image, you can also optionally choose to enable or disable it on your homepage, blog index pages, single post pages and individual pages.
+* If you select the "dropdown" option for in Mobile > mobile menu, you will need to set a custom menu in Menus > Menu Locations > Navigation menu for it to work properly.
 * You can also set a custom menu to appear at the bottom right of your site. Note this footer menu doesn't support sub-menus, only top-level menu items will be displayed.
 
 Additional documentation and free support forums can be found at https://www.iceablethemes.com under "support".
@@ -67,6 +68,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 August 1st, 2017
 * Enhanced: header.php: wrapped pingback url in appropriate conditionals
 * Enhanced: HTML5Shiv is now properly enqueued
+* Enhanced: Dropdown mobile menu uses core function wp_nav_menu with a custom walker
 
 = 1.0.4 =
 July 31th, 2017

@@ -26,7 +26,15 @@ endif;
     'theme_location' => 'primary',
     'items_wrap' => '<ul id="%1$s" class="%2$s sf-menu">%3$s</ul>',
     ) );
- if ( $materia_responsive_menu == 'dropdown' ) materia_dropdown_nav_menu();
+ if ( $materia_responsive_menu == 'dropdown' ):
+    wp_nav_menu( array(
+      'container' => '',
+      'container_class' => '',
+      'theme_location' => 'primary',
+      'items_wrap'     => '<select id="dropdown-menu"><option value="">' . __('Menu', 'materia-lite') . '</option>%3$s</select>',
+      'walker'  => new Materia_Walker_Nav_Menu_Dropdown(),
+      ) );
+endif;
  ?></div>
 
 </div><?php // End #nav-wrap
