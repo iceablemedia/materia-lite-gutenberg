@@ -11,7 +11,33 @@
 
 /* Adjust mobile menu size */
 function icfmenusize(){
-	jQuery("#icefit-mobile-menu>div").width(jQuery(window).width());
+	var windowWidth = jQuery(window).width();
+	// Close mobile menu if window was resized to more than 767px
+	if ( windowWidth > 767 ) {
+		icfCloseMobileMenu();
+	// Otherwise, resize mobile menu to window's size
+	} else {
+		jQuery("#icefit-mobile-menu>div").width(windowWidth);
+	}
+}
+
+function icfOpenMobileMenu() {
+	if ( ! jQuery( '#icefit-mobile-menu' ).hasClass('open') ) {
+		jQuery( '#icefit-mobile-menu' ).show().addClass('open');
+		jQuery( '#icefit-mobile-menu > div' ).animate({ "margin-left": "0" }, 300, function(){
+			jQuery("head").append('<style id="mobile-menu" type="text/css">#main-wrap > *, #main-wrap #header-wrap > * {display:none} #main-wrap #header-wrap, #main-wrap #header-wrap #icefit-mobile-menu { display: block }</style>');
+		});
+	}
+}
+
+function icfCloseMobileMenu() {
+	if ( jQuery( '#icefit-mobile-menu' ).hasClass('open') ) {
+		jQuery( '#icefit-mobile-menu' ).removeClass('open');
+		jQuery('head #mobile-menu').remove();
+		jQuery( '#icefit-mobile-menu > div' ).animate({ "margin-left": "-100%" }, 300).promise().done(function(){
+			jQuery( '#icefit-mobile-menu' ).hide();
+		});
+	}
 }
 
 jQuery(window).resize(function(){
@@ -33,18 +59,11 @@ jQuery(document).ready(function($){
 	$('.icefit-mobile-menu-close, #icefit-mobile-menu .search-form').prependTo('#icefit-mobile-menu .main-nav');
 
 	$('.icefit-mobile-menu-open').click(function() {
-		$( '#icefit-mobile-menu' ).show();
-		$( '#icefit-mobile-menu > div' ).animate({ "margin-left": "0" }, 300, function(){
-			$("head").append('<style id="mobile-menu" type="text/css">#main-wrap > *, #main-wrap #header-wrap > * {display:none} #main-wrap #header-wrap, #main-wrap #header-wrap #icefit-mobile-menu { display: block }</style>');
-		});
+		icfOpenMobileMenu();
 	});
 
 	$('.icefit-mobile-menu-close').click(function() {
-		$('head #mobile-menu').remove();
-		$( '#icefit-mobile-menu > div' ).animate({ "margin-left": "-100%" }, 300).promise().done(function(){
-			$( '#icefit-mobile-menu' ).hide();
-		});
-
+		icfCloseMobileMenu();
 	});
 
 	icfmenusize();

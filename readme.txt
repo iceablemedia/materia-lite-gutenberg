@@ -69,6 +69,7 @@ August 1st, 2017
 * Enhanced: header.php: wrapped pingback url in appropriate conditionals
 * Enhanced: HTML5Shiv is now properly enqueued
 * Enhanced: Dropdown mobile menu uses core function wp_nav_menu with a custom walker
+* Enhanced: Drawer mobile menu closes automatically if window is resized to a width larger than the one it is meant for
 
 = 1.0.4 =
 July 31th, 2017
