@@ -11,7 +11,7 @@
 ==================================================
 * 1. IceFit Main CSS
 * 2. Theme Styles
-* 2. @media queries
+* 3. @media queries
 */
 /* 1. IceFit Main CSS
 ================================================== */
@@ -2256,7 +2256,7 @@ h1.entry-title {
     text-align: right;
 }
 
-/* 2. @media queries
+/* 3. @media queries
 ================================================== */
 @media only screen and (min-width: 768px) {
     .icefit-mobile-menu-open {
@@ -2412,5 +2412,163 @@ h1.entry-title {
         float: left !important;
         width: 50% !important;
         min-height: 210px;
+    }
+}
+
+/* 4. print styles
+================================================== */
+@media print {
+    /* General */
+    body {
+        background: white;
+        color: black;
+        margin: 0;
+        font-size: 10pt;
+        line-height: 140%;
+    }
+    p {
+        margin: 0 0 5pt;
+    }
+    ol,
+    table,
+    ul {
+        margin-bottom: 5pt;
+    }
+    h1 {
+        font-size: 15pt;
+    }
+    h2 {
+        font-size: 14pt;
+    }
+    h3 {
+        font-size: 13pt;
+    }
+    h4 {
+        font-size: 12pt;
+    }
+    h5 {
+        font-size: 11pt;
+    }
+    h6 {
+        font-size: 10pt;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 5pt;
+        margin-bottom: 5pt;
+    }
+    /* Header */
+    #header {
+        padding: 0;
+    }
+    #nav-wrap {
+        display: none;
+    }
+    #header-image {
+        display: none;
+    }
+    /* Index */
+    .entry-title,
+    .entry-title a {
+        font-size: 14pt;
+        margin-bottom: 5pt;
+    }
+    #index-container .thumbnail {
+        padding: 0;
+    }
+    .entry-wrap {
+        padding: 0;
+    }
+    .entry-meta {
+        font-size: 9pt;
+        margin-bottom: 5pt;
+    }
+    .entry-buttons {
+        display: none;
+    }
+    .entry-footer {
+        display: none;
+    }
+    .hentry,
+    .post,
+    .type-page {
+        margin-bottom: 15pt;
+    }
+    .page_nav {
+        display: none;
+    }
+    /* Single */
+    h1.page-title {
+        font-size: 14pt;
+    }
+    .icon-chip {
+        height: auto;
+        font-size: 9pt;
+        line-height: 140%;
+        margin: 0 10pt 0 0;
+        background: #ffffff;
+    }
+    .icon-chip:before {
+        display: none;
+    }
+    .icon-chip a {
+        padding: 0 0 0 10pt;
+    }
+    .icon-chip .fa {
+        line-height: 140%;
+        left: 0;
+        color: #000000;
+    }
+    /* Comments */
+    .comments #comments {
+        padding: 0;
+        font-size: 12pt;
+    }
+    .comment-respond {
+        display: none;
+    }
+    .comments_nav {
+        display: none;
+    }
+    /* Page */
+    .type-page.entry-wrap {
+        padding: 0;
+    }
+    #page-container > *,
+    .with-sidebar #page-container > * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 5pt;
+    }
+    .paged_nav {
+        display: none;
+    }
+    /* Widgets */
+    .widget {
+        padding: 0;
+        margin-bottom: 10pt;
+    }
+    h3.widget-title {
+        font-size: 12pt !important;
+    }
+    .widget ul li {
+        font-size: 9pt;
+        padding: 0;
+    }
+    /* Footer */
+    #footer {
+        page-break-before: always;
+    }
+    #sub-footer {
+        background: #ffffff;
+        font-size: 9pt;
+        color: #000000;
+    }
+    .sub-footer-right .navigation {
+        display: none;
     }
 }

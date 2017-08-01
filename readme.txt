@@ -71,6 +71,7 @@ August 1st, 2017
 * Enhanced: Dropdown mobile menu uses core function wp_nav_menu with a custom walker
 * Enhanced: Drawer mobile menu closes automatically if window is resized to a width larger than the one it is meant for
 * Enhanced: Comments display date with date format as defined in settings
+* Added: Print styles
 
 = 1.0.4 =
 July 31th, 2017

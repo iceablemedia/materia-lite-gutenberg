@@ -12,7 +12,7 @@
 ==================================================
 * 1. IceFit Main CSS
 * 2. Theme Styles
-* 2. @media queries
+* 3. @media queries
 */
 
 /* 1. IceFit Main CSS
@@ -25,7 +25,12 @@
 
 @import 'theme_styles';
 
-/* 2. @media queries
+/* 3. @media queries
 ================================================== */
 
 @import 'media_queries';
+
+/* 4. print styles
+================================================== */
+
+@import 'print';
