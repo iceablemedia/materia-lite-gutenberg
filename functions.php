@@ -515,9 +515,9 @@ function materia_breadcrumbs() {
 			$crumbs .= '<span class="separator"> ' . $sep . ' </span>' . get_the_title();
 
 		elseif ( is_page() ):
+			$output = '';
 			if( $post->post_parent ):
 				$anc = get_post_ancestors( $post->ID );
-				$output = '';
 				foreach ( $anc as $ancestor ):
 					$output = '<a href="'.get_permalink( $ancestor ).'" title="'.get_the_title( $ancestor ).'">'.get_the_title( $ancestor ).'</a><span class="separator"> '.$sep.' </span>' . $output;
 				endforeach;
