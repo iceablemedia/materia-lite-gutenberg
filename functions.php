@@ -424,7 +424,9 @@ function materia_comment_callback( $comment, $args, $depth ) {
         <div class="comment-metadata">
           <a href="<?php echo esc_url( get_comment_link( $comment, $args ) ); ?>"><?php
             ?><time datetime="<?php comment_time( 'c' ); ?>"><?php
-              printf( _x( '%s ago', '%s = human-readable time difference', 'materia-lite' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
+							comment_date();
+							echo ' ';
+              printf( _x( '(%s ago)', '%s = human-readable time difference', 'materia-lite' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) );
             ?></time><?php
           ?></a><?php
         ?></div><!-- .comment-metadata -->
