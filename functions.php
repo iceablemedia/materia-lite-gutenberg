@@ -150,6 +150,10 @@ function materia_styles() {
 
 	endif;
 
+	// Loads HTML5 JavaScript file to add support for HTML5 elements for IE < 9.
+	wp_enqueue_script( 'html5shiv', THEME_DIR_URI . '/js/html5.js' );
+	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
+
 	wp_enqueue_style( 'materia' );
 	wp_enqueue_style( 'materia-style' );
 	wp_enqueue_style( 'font-awesome' );

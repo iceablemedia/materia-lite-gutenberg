@@ -23,15 +23,9 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php endif; ?>
 <?php
-// Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
-<!--[if lt IE 9]>
-<script src="<?php echo THEME_DIR_URI; ?>/js/html5.js" type="text/javascript"></script>
-<![endif]--><?php
-
 /* The <title> tag is handled by WordPress with title-tag
  * If you add your own title tag here, then make sure to
  * remove_theme_support( 'title-tag' ); to avoid duplication. */ ?>
-
 <?php wp_head();
 ?></head><?php
 

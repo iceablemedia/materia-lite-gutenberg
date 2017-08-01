@@ -66,6 +66,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 = 1.0.5 =
 August 1st, 2017
 * Enhanced: header.php: wrapped pingback url in appropriate conditionals
+* Enhanced: HTML5Shiv is now properly enqueued
 
 = 1.0.4 =
 July 31th, 2017
