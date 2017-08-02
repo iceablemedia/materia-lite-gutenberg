@@ -64,6 +64,9 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.6 =
+* Enhanced: moved HTML5Shiv enqueuing from materia_styles() to materia_scripts()
+
 = 1.0.5 =
 August 1st, 2017
 * Enhanced: header.php: wrapped pingback url in appropriate conditionals
