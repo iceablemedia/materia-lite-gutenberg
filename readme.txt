@@ -74,6 +74,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 * Fixed: Removed custom filter for 'get_the_excerpt', using core functionality instead
 * Fixed: Ordered placeholders for printf() in footer.php
 * Fixed: Removed additional support for child themes for WP<4.7 (was relying on file_exists() which emits a PHP E_WARNING upon failure)
+* Fixed: Removed superfluous gettext function with no translatable content
 
 = 1.0.5 =
 August 1st, 2017

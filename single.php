@@ -49,7 +49,7 @@ get_template_part( 'part-title' );
     			esc_attr( sprintf( __( 'View all posts by %s', 'materia-lite' ), get_the_author() ) ),
     			get_the_author() );
     		?><span class="meta-author author vcard icon-chip link"><?php
-        echo sprintf( __( '%s', 'materia-lite' ), $materia_author ); ?></span><?php
+        echo $materia_author; ?></span><?php
 
         /* Meta: Category */
         $materia_cats = array();
@@ -68,7 +68,7 @@ get_template_part( 'part-title' );
 
   		?></div><?php
 
-      $materia_link_pages_args = array( 
+      $materia_link_pages_args = array(
         'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __( 'Pages:', 'materia-lite' ) . '</span>',
         'after'            => '</div>',
         'link_before'      => '<span>',
