@@ -295,41 +295,6 @@ function materia_readmore_link( $classes ) {
 	return $more;
 }
 
-/*
- * Rewrite and replace wp_trim_excerpt() so it adds a relevant read more link
- * when the <!--more--> or <!--nextpage--> quicktags are used
- * This new function preserves every features and filters from the original wp_trim_excerpt
- */
-function materia_trim_excerpt( $text = '' ) {
-	global $post;
-	$raw_excerpt = $text;
-	if ( '' == $text ) {
-		$text = get_the_content( '' );
-		$text = strip_shortcodes( $text );
-		$text = apply_filters( 'the_content', $text );
-		$text = str_replace( ']]>', ']]&gt;', $text );
-		$excerpt_length = apply_filters( 'excerpt_length', 55 );
-		$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
-		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
-
-		/* If the post_content contains a <!--more--> OR a <!--nextpage--> quicktag
-		 * AND the more link has not been added already
-		 * then we add it now
-		 */
-		if ( ( preg_match( '/<!--more( .*? )?-->/', $post->post_content ) || preg_match( '/<!--nextpage-->/', $post->post_content ) ) && strpos( $text,$excerpt_more ) === false ) {
-		 $text .= $excerpt_more;
-		}
-
-	} else { // Manual excerpt is set
-		$excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
-		$text .= $excerpt_more;
-	}
-
-	return apply_filters( 'materia_trim_excerpt', $text, $raw_excerpt );
-}
-remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
-add_filter( 'get_the_excerpt', 'materia_trim_excerpt' );
-
 /* Index page nav ( for use in index.php ) */
 function materia_index_page_nav() {
 
