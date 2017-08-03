@@ -255,13 +255,13 @@ class Materia_Customizer {
 	public static function customize_controls_scripts(){
 		wp_enqueue_style(
 			'materia-customizer-controls-style',
-			THEME_DIR_URI . '/inc/customizer/css/customizer-controls.css',
+			MATERIA_THEME_DIR_URI . '/inc/customizer/css/customizer-controls.css',
 			array( 'customize-controls' )
 		 );
 
 		wp_register_script(
 			  'materia-customizer-section',
-			  THEME_DIR_URI . '/inc/customizer/js/materia-customizer-section.js',
+			  MATERIA_THEME_DIR_URI . '/inc/customizer/js/materia-customizer-section.js',
 			  array( 'jquery','jquery-ui-core','jquery-ui-button','customize-controls' ),
 			  '',
 			  true

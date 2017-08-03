@@ -66,6 +66,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 = 1.0.6 =
 * Enhanced: moved HTML5Shiv enqueuing from materia_styles() to materia_scripts()
+* Fixed: Added missing prefixe to some variables and constants names
 
 = 1.0.5 =
 August 1st, 2017
