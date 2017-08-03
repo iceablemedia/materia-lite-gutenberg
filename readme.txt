@@ -65,6 +65,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 == CHANGELOG ==
 
 = 1.0.6 =
+August 3rd, 2017
 * Enhanced: moved HTML5Shiv enqueuing from materia_styles() to materia_scripts()
 * Fixed: Added missing prefixes to some variables and constants names
 * Fixed: Renamed page-title.php to part-title.php to prevent template hierarchy conflict
