@@ -530,8 +530,8 @@ function materia_breadcrumbs() {
 			endif;
 			$crumbs = $output .	get_the_title();
 
-		elseif ( is_category() ): $crumbs = single_cat_title();
-		elseif ( is_tag() ): $crumbs = single_tag_title();
+		elseif ( is_category() ): $crumbs = single_cat_title( '', false );
+		elseif ( is_tag() ): $crumbs = single_tag_title( '', false );
 		elseif ( is_day() ): $crumbs = __( 'Daily Archives', 'materia-lite' );
 		elseif ( is_month() ): $crumbs = __( 'Monthly Archives', 'materia-lite' );
 		elseif ( is_year() ): $crumbs = __( 'Yearly Archives', 'materia-lite' );

@@ -70,6 +70,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 * Fixed: Renamed page-title.php to part-title.php to prevent template hierarchy conflict
 * Fixed: Added missing string escaping
 * Fixed: Using get_the_archive_title() for archive page titles
+* Fixed: Breadcrumbs for category and tag archive
 
 = 1.0.5 =
 August 1st, 2017
