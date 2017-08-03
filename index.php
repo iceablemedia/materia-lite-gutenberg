@@ -16,7 +16,7 @@ $materia_blog_sidebar_side = 'right';
 
 ?><main class="container"><?php
 
-  get_template_part( 'page-title' );
+  get_template_part( 'part-title' );
 
 ?><div id="index-container"><?php
 

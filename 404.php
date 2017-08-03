@@ -13,7 +13,7 @@
 
  ?><main class="container"><?php
 
- get_template_part( 'page-title' );
+ get_template_part( 'part-title' );
 
  ?><div id="single-container" class="single-container with-sidebar"><?php
 
