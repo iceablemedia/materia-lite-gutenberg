@@ -72,7 +72,7 @@
 			|| ( !is_front_page() && !is_singular() && get_theme_mod( 'materia_blog_header_image' ) != 'off' )
 			|| ( is_404() ) ):
 				$materia_display_mode				= get_theme_mod( 'materia_header_image_display_mode' );
-				$materia_header_image_src		= get_header_image();
+				$materia_header_image_src		= esc_url( get_header_image() );
 				$materia_image_height				= get_custom_header()->height;
 				$materia_image_width				= get_custom_header()->width;
 			endif;

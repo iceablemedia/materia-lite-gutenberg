@@ -558,7 +558,7 @@ function materia_breadcrumbs() {
 require_once 'inc/customizer/customizer.php';
 
 function materia_customizer_css() {
-	$main_color = get_theme_mod( 'materia_main_color', '#009688' );
+	$main_color = esc_attr ( get_theme_mod( 'materia_main_color', '#009688' ) );
 
 	$mainhsl = materia_hex2HSL( $main_color );
 	$main_color_dark = materia_HSL2hex( $mainhsl[0], $mainhsl[1], 0.82*$mainhsl[2] );
