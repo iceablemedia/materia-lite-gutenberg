@@ -21,15 +21,15 @@ endif;
 /* You are free to modify or replace this by anything you like as per the terms of the GPL license */ ?>
 
 <?php
-	printf( __( 'Copyright &copy; %s %s.', 'materia-lite' ), date( 'Y' ), get_bloginfo( 'name' ) );
+	printf( __( 'Copyright &copy; %1$s, %2$s.', 'materia-lite' ), date( 'Y' ), get_bloginfo( 'name' ) );
 	echo ' ';
-	printf( __( 'Proudly powered by <a href="%s" title="%s">%s</a>.', 'materia-lite' ),
+	printf( __( 'Proudly powered by <a href="%1$s" title="%2$s">%3$s</a>.', 'materia-lite' ),
 		esc_url( __( 'https://wordpress.org/', 'materia-lite' ) ),
 		esc_attr__( 'Semantic Personal Publishing Platform', 'materia-lite' ),
 		__( 'WordPress', 'materia-lite' )
 	 );
 	echo ' ';
-	printf( __( 'Materia design by <a href="%s" title="%s">Iceable Themes</a>.', 'materia-lite' ),
+	printf( __( 'Materia design by <a href="%1$s" title="%2$s">Iceable Themes</a>.', 'materia-lite' ),
 		esc_url( 'https://www.iceablethemes.com' ),
 		esc_attr( 'Iceablethemes', 'materia-lite' )
 	 );

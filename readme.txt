@@ -72,6 +72,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 * Fixed: Using get_the_archive_title() for archive page titles
 * Fixed: Breadcrumbs for category and tag archive
 * Fixed: Removed custom filter for 'get_the_excerpt', using core functionality instead
+* Fixed: Ordered placeholders for printf() in footer.php
 
 = 1.0.5 =
 August 1st, 2017
