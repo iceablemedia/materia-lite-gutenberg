@@ -131,23 +131,6 @@ function materia_styles() {
 		// Load font-awesome
 		wp_register_style( 'font-awesome', get_theme_file_uri ( 'css/font-awesome/css/font-awesome.min.css' ), array(), MATERIA_THEME_VERSION );
 
-	else: // Support for WordPress <4.7 ( to be removed after 4.9 is released )
-
-		/* Child theme support:
-		 * Enqueue child-theme's versions of stylesheet in /css if they exist,
-		 * or the parent theme's version otherwise
-		 */
-		if ( @file_exists( MATERIA_STYLESHEET_DIR . $stylesheet ) )
-			wp_register_style( 'materia', MATERIA_STYLESHEET_DIR_URI . $stylesheet, array(), MATERIA_THEME_VERSION );
-		else
-			wp_register_style( 'materia', MATERIA_THEME_DIR_URI . $stylesheet, array(), MATERIA_THEME_VERSION );
-
-		// Always enqueue style.css from the current theme
-		wp_register_style( 'materia-style', MATERIA_STYLESHEET_DIR_URI . '/style.css', array(), MATERIA_THEME_VERSION );
-
-		// Load font-awesome
-		wp_register_style( 'font-awesome', MATERIA_THEME_DIR_URI . "/css/font-awesome/css/font-awesome.min.css", array(), MATERIA_THEME_VERSION );
-
 	endif;
 
 	wp_enqueue_style( 'materia' );
