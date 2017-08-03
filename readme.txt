@@ -69,6 +69,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 * Fixed: Added missing prefixe to some variables and constants names
 * Fixed: Renamed page-title.php to part-title.php to prevent template hierarchy conflict
 * Fixed: Added missing string escaping
+* Fixed: Using get_the_archive_title() for archive page titles
 
 = 1.0.5 =
 August 1st, 2017

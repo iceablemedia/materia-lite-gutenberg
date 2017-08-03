@@ -27,27 +27,9 @@ else:
     $materia_title = sprintf( __( 'Search Results for "%s"', 'materia-lite' ), get_search_query() );
   endif;
 
-  /* TAG CONDITIONAL TITLE */
-  if ( is_tag() ):
-    $materia_title = sprintf( __( 'Tag: %s', 'materia-lite' ), single_tag_title( '', false ) );
-  endif;
-
-  /* CATEGORY CONDITIONAL TITLE */
-  if ( is_category() ):
-    $materia_title = sprintf( __( 'Category: %s', 'materia-lite' ), single_cat_title( '', false ) );
-  endif;
-
-  /* ARCHIVES CONDITIONAL TITLE */
-  if ( is_day() ):
-    $materia_title = sprintf( __( 'Daily archives: %s', 'materia-lite' ), get_the_time( 'F jS, Y' ) );
-  endif;
-
-  if ( is_month() ):
-    $materia_title = sprintf( __( 'Monthly archives: %s', 'materia-lite' ), get_the_time( 'F, Y' ) );
-  endif;
-
-  if ( is_year() ):
-    $materia_title = sprintf( __( 'Yearly archives: %s', 'materia-lite' ), get_the_time( 'Y' ) );
+  /* ARCHIVE CONDITIONAL TITLE */
+  if ( is_archive() ):
+    $materia_title = get_the_archive_title();
   endif;
 
   /* DEFAULT BLOG INDEX TITLE */
