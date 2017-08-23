@@ -137,7 +137,7 @@ function materia_styles() {
 	wp_enqueue_style( 'materia-style' );
 	wp_enqueue_style( 'font-awesome' );
 
-	wp_enqueue_style( 'Roboto', "//fonts.googleapis.com/css?family=Roboto:300italic,400italic,500italic,700italic,300,400,500,700&subset=latin,latin-ext", array(), null );
+	wp_enqueue_style( 'materia-roboto', "//fonts.googleapis.com/css?family=Roboto:300italic,400italic,500italic,700italic,300,400,500,700&subset=latin,latin-ext", array(), null );
 
 }
 add_action( 'wp_enqueue_scripts', 'materia_styles' );
