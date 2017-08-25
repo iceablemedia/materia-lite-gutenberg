@@ -409,39 +409,27 @@ function materia_comment_callback( $comment, $args, $depth ) {
 /*
  * Create dropdown menu ( for responsive mode )
  */
-class Materia_Walker_Nav_Menu_Dropdown extends Walker_Nav_Menu {
-
-    function start_lvl( &$output, $depth = 0, $args = array() ) {    }
-
-    function end_lvl( &$output, $depth = 0, $args = array() ) {    }
-
-    function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-        $item_output = '';
-
-        // Account for the depth
-        $item->title = str_repeat( "&raquo;&nbsp;", $depth ) . $item->title;
-
-        // Get the attributes
-        $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-        $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-        $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-        $attributes .= ! empty( $item->url )        ? ' value="'   . esc_attr( $item->url        ) .'"' : '';
-
-        // Create the html
-        $item_output .= '<option'. $attributes .'>';
-        $item_output .= apply_filters( 'the_title_attribute', $item->title );
-
-        // Add item to the output string.
-        $output .= $item_output;
-
+function materia_dropdown_nav_menu() {
+	$menu_name = 'primary';
+	if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ $menu_name ] ) ) {
+		if ( $menu = wp_get_nav_menu_object( $locations[ $menu_name ] ) ) {
+		$menu_items = wp_get_nav_menu_items( $menu->term_id );
+		$menu_list = '<select id="dropdown-menu">';
+		$menu_list .= '<option value="">Menu</option>';
+		foreach ( ( array ) $menu_items as $key => $menu_item ) {
+			$title = $menu_item->title;
+			$url = $menu_item->url;
+			if ( $menu_item->menu_item_parent && $menu_item->menu_item_parent > 0 ):
+				$menu_list .= '<option value="' . $url . '"> &raquo; ' . $title . '</option>';
+			else:
+				$menu_list .= '<option value="' . $url . '">' . $title . '</option>';
+			endif;
+		}
+		$menu_list .= '</select>';
+   		// $menu_list now ready to output
+   		echo $menu_list;
+		}
     }
-
-    function end_el( &$output, $item, $depth = 0, $args = array() ) {
-        // Close the item.
-        $output .= "</option>\n";
-
-    }
-
 }
 
 // Generate breadcrumbs
