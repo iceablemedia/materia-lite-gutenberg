@@ -65,7 +65,7 @@ Your translation files will be added to the next update. Don't forget to leave y
 == CHANGELOG ==
 
 = 1.0.7 =
-August 23rd, 2017
+August 25th, 2017
 * Fixed: Added prefix to Google font handle
 * Fixed: Restored custom function to generate the mobile dropdown menu. Using wp_nav_menu() with a custom Walker does not work with fallback_cb and causes additional issues. See https://core.trac.wordpress.org/ticket/18232
 
