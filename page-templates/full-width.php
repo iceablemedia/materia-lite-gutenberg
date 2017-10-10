@@ -11,64 +11,86 @@
 
 get_header();
 
-?><main class="container"><?php
+?>
+<main class="container">
+	<?php
 
-get_template_part( 'part-title' );
+	get_template_part( 'part-title' );
 
-?><div id="single-container" class="single-container"><?php
+	?>
+	<div id="single-container" class="single-container">
+		<?php
 
-  if( have_posts() ):
-  while( have_posts() ) : the_post();
+		if ( have_posts() ) :
+			while ( have_posts() ) :
+				the_post();
 
-  ?><div id="page-<?php the_ID(); ?>" <?php post_class( 'entry-wrap' ); ?>><?php
+				?>
+				<div id="page-<?php the_ID(); ?>" <?php post_class( 'entry-wrap' ); ?>>
+					<?php
 
-    /* Post thumbnail ( Featured Image ) */
-    if ( '' != get_the_post_thumbnail() ) :
-      ?><div class="thumbnail"><?php
-            the_post_thumbnail( 'large', array( 'class' => '' ) );
-      ?></div><?php
-    endif;
+					/* Post thumbnail ( Featured Image ) */
+					if ( '' !== get_the_post_thumbnail() ) :
+						?>
+						<div class="thumbnail">
+							<?php
+							the_post_thumbnail(
+								'large',
+								array(
+									'class' => '',
+								)
+							);
+							?>
+						</div>
+						<?php
+					endif;
 
-      ?><div id="page-container" class="post-content entry-content"><?php
+					?>
+					<div id="page-container" class="post-content entry-content">
+						<?php the_content(); ?>
+					</div>
+					<?php
 
-						the_content();
+					wp_link_pages(
+						array(
+							'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __( 'Pages:', 'materia-lite' ) . '</span>',
+							'after'            => '</div>',
+							'link_before'      => '<span>',
+							'link_after'       => '</span>',
+							'next_or_number'   => 'number',
+							'nextpagelink'     => __( 'Next page', 'materia-lite' ),
+							'previouspagelink' => __( 'Previous page', 'materia-lite' ),
+							'pagelink'         => '%',
+							'echo'             => 1,
+						)
+					);
 
-  		?></div><?php
+					?>
+				</div>
+				<?php
 
-      $materia_link_pages_args = array(
-        'before'           => '<br class="clear" /><div class="paged_nav"><span>' . __( 'Pages:', 'materia-lite' ) . '</span>',
-        'after'            => '</div>',
-        'link_before'      => '<span>',
-        'link_after'       => '</span>',
-        'next_or_number'   => 'number',
-        'nextpagelink'     => __( 'Next page', 'materia-lite' ),
-        'previouspagelink' => __( 'Previous page', 'materia-lite' ),
-        'pagelink'         => '%',
-        'echo'             => 1
-      );
-      wp_link_pages( $materia_link_pages_args );
+				// Display comments section only if comments are open or if there are comments already.
+				if ( comments_open() || '0' !== get_comments_number() ) :
+					?>
+					<div class="comments">
+						<?php comments_template( '', true ); ?>
+					</div>
+					<?php
+				endif;
+			endwhile;
 
-    ?></div><?php // end page
+		else : // Empty loop ( this should never happen! )
 
+			?>
+			<h2><?php esc_html_e( 'Not Found', 'materia-lite' ); ?></h2>
+			<p><?php esc_html_e( 'What you are looking for isn\'t here...', 'materia-lite' ); ?></p>
+			<?php
 
-    // Display comments section only if comments are open or if there are comments already.
-    if ( comments_open() || get_comments_number()!=0 ):
-      ?><div class="comments"><?php
-        comments_template( '', true );
-      ?></div><?php // end comment section
-    endif;
+		endif;
 
-  endwhile;
-
-  else: // Empty loop ( this should never happen! )
-
-    ?><h2><?php _e( 'Not Found', 'materia-lite' ); ?></h2>
-    <p><?php _e( 'What you are looking for isn\'t here...', 'materia-lite' ); ?></p><?php
-
-  endif;
-
-  ?></div><?php // End single container
-
-?></main><?php //  End main content
+		?>
+	</div>
+</main>
+<?php
 
 get_footer();

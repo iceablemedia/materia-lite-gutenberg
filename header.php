@@ -19,79 +19,94 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<?php if ( is_singular() && pings_open() ): ?>
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<?php if ( is_singular() && pings_open() ) : ?>
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php endif; ?>
 <?php
-/* The <title> tag is handled by WordPress with title-tag
+/**
+ * The <title> tag is handled by WordPress with title-tag
  * If you add your own title tag here, then make sure to
- * remove_theme_support( 'title-tag' ); to avoid duplication. */ ?>
-<?php wp_head();
-?></head><?php
+ * remove_theme_support( 'title-tag' ); to avoid duplication.
+ */
+wp_head();
+?>
+</head>
+<body <?php body_class(); ?>>
+	<div id="main-wrap" class=''>
+		<div id="header">
+			<div class="container">
+				<?php
 
-?><body <?php body_class(); ?>><?php
+				if ( get_theme_mod( 'custom_logo' ) ) :
+					?>
+					<h1 class="site-title" style="display:none"><?php echo bloginfo( 'name' ); ?></h1>
+					<div id="logo">
+						<a href="<?php echo esc_url( home_url() ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
+							<?php the_custom_logo(); ?>
+						</a>
+					</div>
+					<?php
+				else :
+					?>
+					<h1 class="site-title">
+						<a class="site-title-link" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+					</h1>
+					<?php
+				endif;
 
-/* #main-wrap */
-?><div id="main-wrap" class=""><?php
+				if ( get_bloginfo( 'description' ) ) :
+					?>
+					<div id="tagline"><?php bloginfo( 'description' ); ?></div>
+					<?php
+				endif;
 
-  /* #header */
-  ?><div id="header">
-    <div class="container"><?php
+				?>
+			</div>
+		</div>
+		<?php
 
-    if ( get_theme_mod( 'custom_logo' ) ) :
+		get_template_part( 'navbar' );
 
-      ?><h1 class="site-title" style="display:none"><?php echo bloginfo( 'name' ); ?></h1><?php
-
-      ?><div id="logo"><a href="<?php echo esc_url( home_url() ); ?>" title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'>
-          <?php the_custom_logo(); ?>
-      </a></div><?php // End #logo
-
-    else:
-
-      ?><h1 class="site-title">
-        <a class="site-title-link" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
-      </h1><?php
-
-    endif;
-
-    if ( get_bloginfo ( 'description' ) ):
-      ?><div id="tagline"><?php bloginfo( 'description' ); ?></div><?php
-    endif;
-
-    ?></div>
-  </div><?php // End #header
-
-
-  get_template_part( 'navbar' );
-
-  // Header image
-	if ( get_custom_header()->url ) :
-		if ( ( is_front_page() && get_theme_mod( 'materia_home_header_image' ) != 'off' )
-			|| ( is_page() && !is_front_page() && get_theme_mod( ' materia_pages_header_image' ) != 'off' )
-			|| ( is_single() && get_theme_mod( 'materia_single_header_image' ) != 'off' )
-			|| ( !is_front_page() && !is_singular() && get_theme_mod( 'materia_blog_header_image' ) != 'off' )
-			|| ( is_404() ) ):
-				$materia_display_mode				= get_theme_mod( 'materia_header_image_display_mode' );
-				$materia_header_image_src		= esc_url( get_header_image() );
-				$materia_image_height				= get_custom_header()->height;
-				$materia_image_width				= get_custom_header()->width;
+		// Header image
+		if ( get_custom_header()->url ) :
+			if (
+				( is_front_page() && 'off' !== get_theme_mod( 'home_header_image' ) )
+				|| ( is_page() && ! is_front_page() && 'off' !== get_theme_mod( 'pages_header_image' ) )
+				|| ( is_single() && 'off' !== get_theme_mod( 'single_header_image' ) )
+				|| ( ! is_front_page() && ! is_singular() && 'off' !== get_theme_mod( 'blog_header_image' ) )
+				|| ( is_404() )
+			) :
+				$materia_display_mode     = get_theme_mod( 'materia_header_image_display_mode' );
+				$materia_header_image_src = esc_url( get_header_image() );
+				$materia_image_height     = get_custom_header()->height;
+				$materia_image_width      = get_custom_header()->width;
 			endif;
 		endif;
 
+		if ( isset( $materia_header_image_src ) ) :
+			if ( $materia_header_image_src ) :
 
-	if ( isset( $materia_header_image_src ) ):
-		if ( $materia_header_image_src ):
 
-	  	?><div id="header-image"<?php
-	  		if ( $materia_display_mode == 'card' ) echo ' class="container"';
-	  		if ( $materia_display_mode == 'full-width' ) echo ' class="full-width" style="background-image: url( '.$materia_header_image_src.' ); height:'.$materia_image_height.'px"';
-	  	?>><?php
+				if ( 'card' === $materia_display_mode ) :
+					$header_image_class = 'container';
+				endif;
+				$header_image_style_attr = '';
+				if ( 'full-width' === $materia_display_mode ) :
+					$header_image_class = 'full-width';
+					$header_image_style_attr = ' style="background-image: url( ' . esc_url( $materia_header_image_src ) . ' ); height:' . esc_attr( $materia_image_height ) . 'px"';
 
-	  		if ( $materia_display_mode == 'card' ) :
-	  			?><img class="cards" src="<?php echo $materia_header_image_src; ?>" height="<?php echo $materia_image_height; ?>" width="<?php echo $materia_image_width; ?>" alt="" /><?php
-	  		endif;
+				endif;
 
-	  	?></div><?php
-
+				?>
+				<div id="header-image" class="<?php echo esc_attr( $header_image_class ); ?>"<?php echo esc_attr( $header_image_style_attr ); ?>>
+					<?php
+					if ( 'card' === $materia_display_mode ) :
+						?>
+						<img class="cards" src="<?php echo esc_url( $materia_header_image_src ); ?>" height="<?php echo esc_attr( $materia_image_height ); ?>" width="<?php echo esc_attr( $materia_image_width ); ?>" alt='' />
+						<?php
+					endif;
+					?>
+				</div>
+			<?php
 		endif;
 	endif;
