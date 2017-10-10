@@ -64,6 +64,10 @@ Your translation files will be added to the next update. Don't forget to leave y
 
 == CHANGELOG ==
 
+= 1.0.8 =
+October 10th, 2017
+* Refactored all PHP code to conform to the WordPress coding standards
+
 = 1.0.7 =
 August 25th, 2017
 * Fixed: Added prefix to Google font handle
