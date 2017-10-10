@@ -1929,14 +1929,16 @@ h1.entry-title {
 }
 
 .commentlist .comment,
-.commentlist .pingback {
+.commentlist .pingback,
+.commentlist .trackback {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
     list-style: none;
     margin: 0;
 }
 
 .commentlist .comment:first-child.depth-1,
-.commentlist .pingback:first-child.depth-1 {
+.commentlist .pingback:first-child.depth-1,
+.commentlist .trackback:first-child.depth-1 {
     border-top: none;
 }
 

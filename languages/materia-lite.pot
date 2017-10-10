@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 (GPLv2).
 msgid ""
 msgstr ""
-"Project-Id-Version: Materia Lite 1.0.5\n"
+"Project-Id-Version: Materia Lite 1.0.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/style\n"
-"POT-Creation-Date: 2017-08-01 12:13:54+00:00\n"
+"POT-Creation-Date: 2017-10-10 14:03:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,354 +13,332 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: 404.php:24
+#: 404.php:25
 msgid "Page Not Found"
 msgstr ""
 
-#: 404.php:25 index.php:142 page-templates/full-width.php:66 page.php:66
-#: single.php:117
+#: 404.php:26 index.php:228 page-templates/full-width.php:86 page.php:87
+#: single.php:155
 msgid "What you are looking for isn't here..."
 msgstr ""
 
-#: 404.php:26
+#: 404.php:27
 msgid "Maybe a search will help ?"
 msgstr ""
 
-#: comments.php:17
+#: comments.php:20
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
 
-#: comments.php:23
-msgid "One Response to %2$s"
+#: comments.php:33
+#. Translators: %1$s is the number of comments, %2$s is the post title
+msgid "%1$s Response to %2$s"
 msgid_plural "%1$s Responses to %2$s"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:33
+#: comments.php:59
 msgid "Older comments"
 msgstr ""
 
-#: comments.php:36
+#: comments.php:65
 msgid "Newer comments"
 msgstr ""
 
-#: comments.php:45
+#: comments.php:78
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:24
-msgid "Copyright &copy; %s %s."
+#: footer.php:37
+#. Translators: %1$s is the copyright date, %2$s is the site name (e.g.
+#. Copyright © 2017, My Website)
+msgid "Copyright &copy; %1$s, %2$s."
 msgstr ""
 
-#: footer.php:26
-msgid "Proudly powered by <a href=\"%s\" title=\"%s\">%s</a>."
+#: footer.php:44
+#. Translators: "Powered by" link to WordPress.org. %1$s is the localized
+#. wordpress.org url (e.g. https:en.wordpress.org), %2$s is title attribute for
+#. the link ("Semantic Personal Publishing Platform"), %3$s is the anchor
+#. ("WordPress")
+msgid "Proudly powered by <a href=\"%1$s\" title=\"%2$s\">%3$s</a>."
 msgstr ""
 
-#: footer.php:27
+#: footer.php:45
 msgid "https://wordpress.org/"
 msgstr ""
 
-#: footer.php:28
+#: footer.php:46
 msgid "Semantic Personal Publishing Platform"
 msgstr ""
 
-#: footer.php:29
+#: footer.php:47
 msgid "WordPress"
 msgstr ""
 
-#: footer.php:32
-msgid "Materia design by <a href=\"%s\" title=\"%s\">Iceable Themes</a>."
-msgstr ""
-
-#: functions.php:89
-msgid "Default Sidebar"
+#: footer.php:52
+#. Translators: %s is a link to the author's website with the name "Iceable
+#. Themes" as anchor
+msgid "Materia design by %s."
 msgstr ""
 
 #: functions.php:97
+msgid "Default Sidebar"
+msgstr ""
+
+#: functions.php:106
 msgid "Footer"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:237
 msgid "Customize this menu now!"
 msgstr ""
 
-#: functions.php:289
+#: functions.php:286
 msgid "Read More"
 msgstr ""
 
-#: functions.php:333
+#: functions.php:296
 msgid "Previous Posts"
 msgstr ""
 
-#: functions.php:336
+#: functions.php:302
 msgid "Next Posts"
 msgstr ""
 
-#: functions.php:355
+#: functions.php:325
 msgid "Next Post"
 msgstr ""
 
-#: functions.php:361
+#: functions.php:331
 msgid "Previous Post"
 msgstr ""
 
-#: functions.php:435
+#: functions.php:395
+#. Translators: %s is the author's name
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: functions.php:409
+#. Translators: %s is the relative time (e.g. (3 days ago) )
+msgid "(%s ago)"
+msgstr ""
+
+#: functions.php:419
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:451
+#: functions.php:442
 msgid "Edit"
 msgstr ""
 
-#: functions.php:531
-msgid "Daily Archives"
-msgstr ""
-
-#: functions.php:532
-msgid "Monthly Archives"
-msgstr ""
-
-#: functions.php:533
-msgid "Yearly Archives"
-msgstr ""
-
-#: functions.php:534
-msgid "Author Archives"
-msgstr ""
-
-#: functions.php:535
-msgid "Blog Archives"
-msgstr ""
-
-#: functions.php:536
-msgid "Search Results"
-msgstr ""
-
-#: functions.php:537
-msgid "404 Error"
-msgstr ""
-
-#: functions.php:543
+#: functions.php:488
 msgid "Home"
 msgstr ""
 
-#: inc/customizer/customizer.php:17
+#: functions.php:519
+msgid "Search Results"
+msgstr ""
+
+#: functions.php:523
+msgid "404 Error"
+msgstr ""
+
+#: inc/customizer/customizer.php:19
 msgid "Blog Settings"
 msgstr ""
 
-#: inc/customizer/customizer.php:22
+#: inc/customizer/customizer.php:27
 msgid "Mobile"
 msgstr ""
 
-#: inc/customizer/customizer.php:27
+#: inc/customizer/customizer.php:35
 msgid "More"
 msgstr ""
 
-#: inc/customizer/customizer.php:38
+#: inc/customizer/customizer.php:53
 msgid "Main Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:53
+#: inc/customizer/customizer.php:74
 msgid "Blog Index Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:58
+#: inc/customizer/customizer.php:79
 msgid "Excerpt"
 msgstr ""
 
-#: inc/customizer/customizer.php:59
+#: inc/customizer/customizer.php:80
 msgid "Full content"
 msgstr ""
 
-#: inc/customizer/customizer.php:73
+#: inc/customizer/customizer.php:100
 msgid "Responsive Mode"
 msgstr ""
 
-#: inc/customizer/customizer.php:78 inc/customizer/customizer.php:137
-#: inc/customizer/customizer.php:156 inc/customizer/customizer.php:175
-#: inc/customizer/customizer.php:194
+#: inc/customizer/customizer.php:105 inc/customizer/customizer.php:182
+#: inc/customizer/customizer.php:207 inc/customizer/customizer.php:231
+#: inc/customizer/customizer.php:256
 msgid "On"
 msgstr ""
 
-#: inc/customizer/customizer.php:79 inc/customizer/customizer.php:138
-#: inc/customizer/customizer.php:157 inc/customizer/customizer.php:176
-#: inc/customizer/customizer.php:195
+#: inc/customizer/customizer.php:106 inc/customizer/customizer.php:183
+#: inc/customizer/customizer.php:208 inc/customizer/customizer.php:232
+#: inc/customizer/customizer.php:257
 msgid "Off"
 msgstr ""
 
-#: inc/customizer/customizer.php:93
+#: inc/customizer/customizer.php:126
 msgid "Mobile menu"
 msgstr ""
 
-#: inc/customizer/customizer.php:98
+#: inc/customizer/customizer.php:131
 msgid "Mobile drawer"
 msgstr ""
 
-#: inc/customizer/customizer.php:99
+#: inc/customizer/customizer.php:132
 msgid "Dropdown"
 msgstr ""
 
-#: inc/customizer/customizer.php:113
+#: inc/customizer/customizer.php:152
 msgid "Header image display mode"
 msgstr ""
 
-#: inc/customizer/customizer.php:118
+#: inc/customizer/customizer.php:157
 msgid "Card"
 msgstr ""
 
-#: inc/customizer/customizer.php:119
+#: inc/customizer/customizer.php:158
 msgid "Full Width"
 msgstr ""
 
-#: inc/customizer/customizer.php:132
+#: inc/customizer/customizer.php:177
 msgid "Display header on Homepage"
 msgstr ""
 
-#: inc/customizer/customizer.php:151
+#: inc/customizer/customizer.php:202
 msgid "Display header on Blog Index"
 msgstr ""
 
-#: inc/customizer/customizer.php:170
+#: inc/customizer/customizer.php:226
 msgid "Display header on Single Posts"
 msgstr ""
 
-#: inc/customizer/customizer.php:189
+#: inc/customizer/customizer.php:251
 msgid "Display header on Pages"
 msgstr ""
 
-#: inc/customizer/customizer.php:209
+#: inc/customizer/customizer.php:277
 msgid "Get Materia Pro"
 msgstr ""
 
-#: inc/customizer/customizer.php:210
+#: inc/customizer/customizer.php:278
 msgid ""
 "Unleash the full potential of materia with tons of additional settings, "
 "advanced features and premium support."
 msgstr ""
 
-#: inc/customizer/customizer.php:226
+#: inc/customizer/customizer.php:300
 msgid "Materia Lite support forums"
 msgstr ""
 
-#: inc/customizer/customizer.php:227
+#: inc/customizer/customizer.php:301
 msgid "Have a question? Need help?"
 msgstr ""
 
-#: inc/customizer/customizer.php:243
+#: inc/customizer/customizer.php:323
 msgid "Rate Materia Lite"
 msgstr ""
 
-#: inc/customizer/customizer.php:244
+#: inc/customizer/customizer.php:324
 msgid "Like this theme? We'd love to hear your feedback!"
 msgstr ""
 
-#: inc/customizer/customizer.php:270
+#: inc/customizer/customizer.php:350
 msgid "Upgrade to materia Pro!"
 msgstr ""
 
-#: index.php:53
+#: index.php:74
+#. Translators: %s the date of the post
 msgid "Posted on %s"
 msgstr ""
 
-#: index.php:59 single.php:49
+#: index.php:88 single.php:67
+#. Translators: %s is the author's name
 msgid "View all posts by %s"
 msgstr ""
 
-#: index.php:62
+#: index.php:99
+#. Translators: %s is the author's name
 msgid "by %s"
 msgstr ""
 
-#: index.php:71
+#: index.php:115
+#. Translators: %s is the category name
 msgid "in %s"
 msgstr ""
 
-#: index.php:98
+#: index.php:159
 msgid "Comment"
 msgstr ""
 
-#: index.php:98
+#: index.php:160
 msgid "View 1 Comment"
 msgstr ""
 
-#: index.php:98
+#: index.php:161
 msgid "View % Comments"
 msgstr ""
 
-#: index.php:98
+#: index.php:163
 msgid "Comments Off"
 msgstr ""
 
-#: index.php:118 single.php:92
+#: index.php:188 single.php:123
+#. Translators: %s is a list of tags
 msgid "Tagged with %s"
 msgstr ""
 
-#: index.php:134 index.php:141 page-templates/full-width.php:65 page.php:65
-#: single.php:116
+#: index.php:209 index.php:227 page-templates/full-width.php:85 page.php:86
+#: single.php:154
 msgid "Not Found"
 msgstr ""
 
-#: index.php:135
+#: index.php:214
+#. Translators: %s is the search term
 msgid "Your search for \"%s\" did not return any result."
 msgstr ""
 
-#: index.php:136
+#: index.php:219
 msgid "Would you like to try another search ?"
 msgstr ""
 
-#: navbar.php:34
-msgid "Menu"
-msgstr ""
-
-#: page-templates/full-width.php:39 page.php:39 single.php:72
+#: page-templates/full-width.php:56 page.php:56 single.php:97
 msgid "Pages:"
 msgstr ""
 
-#: page-templates/full-width.php:44 page.php:44 single.php:77
+#: page-templates/full-width.php:61 page.php:61 single.php:102
 msgid "Next page"
 msgstr ""
 
-#: page-templates/full-width.php:45 page.php:45 single.php:78
+#: page-templates/full-width.php:62 page.php:62 single.php:103
 msgid "Previous page"
 msgstr ""
 
-#: page-title.php:22
+#: part-title.php:22
 msgid "404: Page Not Found"
 msgstr ""
 
-#: page-title.php:27
+#: part-title.php:29
+#. Translators: %s is the search term
 msgid "Search Results for \"%s\""
 msgstr ""
 
-#: page-title.php:32
-msgid "Tag: %s"
-msgstr ""
-
-#: page-title.php:37
-msgid "Category: %s"
-msgstr ""
-
-#: page-title.php:42
-msgid "Daily archives: %s"
-msgstr ""
-
-#: page-title.php:46
-msgid "Monthly archives: %s"
-msgstr ""
-
-#: page-title.php:50
-msgid "Yearly archives: %s"
-msgstr ""
-
-#: sidebar.php:17
+#: sidebar.php:18
 msgid "Add some widgets"
 msgstr ""
 
-#: sidebar.php:18
+#: sidebar.php:19
 msgid "Click here to add widgets to your sidebar!"
-msgstr ""
-
-#: single.php:52
-msgid "%s"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -387,27 +365,17 @@ msgstr ""
 msgid "Full-width Page Template, No Sidebar"
 msgstr ""
 
-#: functions.php:396
+#: functions.php:367
 msgctxt "label"
 msgid "Search for:"
 msgstr ""
 
-#: functions.php:398
+#: functions.php:369
 msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: functions.php:400
+#: functions.php:371
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
-
-#: functions.php:418
-msgctxt "%s = comment author link"
-msgid "%s <span class=\"says\">says:</span>"
-msgstr ""
-
-#: functions.php:429
-msgctxt "%s = human-readable time difference"
-msgid "(%s ago)"
 msgstr ""
