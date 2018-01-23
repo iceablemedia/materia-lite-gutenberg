@@ -17,6 +17,11 @@ define( 'MATERIA_STYLESHEET_DIR_URI', get_stylesheet_directory_uri() );
 $materia_the_theme = wp_get_theme();
 define( 'MATERIA_THEME_VERSION', $materia_the_theme->get( 'Version' ) );
 
+/**
+ * Load Gutenberg features support functions
+ */
+require_once 'inc/gutenberg/gutenberg.php';
+
 /*
  * Setup and registration functions
  */

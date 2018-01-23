@@ -13,6 +13,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
+          'assets/css/gutenberg.dev.css': 'assets/scss/gutenberg.scss',
           'assets/css/materia.dev.css': 'assets/scss/materia.scss',
           'assets/css/materia-unresponsive.dev.css': 'assets/scss/materia-unresponsive.scss',
         }
@@ -36,6 +37,7 @@ module.exports = function(grunt) {
           config: 'assets/css/csscomb.json'
         },
         files: {
+          'inc/gutenberg/css/gutenberg.dev.css': 'assets/css/gutenberg.dev.css',
           'css/materia.dev.css': 'assets/css/materia.dev.css',
           'css/materia-unresponsive.dev.css': 'assets/css/materia-unresponsive.dev.css',
         }
@@ -49,6 +51,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
+          'inc/gutenberg/css/gutenberg.min.css': 'inc/gutenberg/css/gutenberg.dev.css',
           'css/materia.min.css': 'css/materia.dev.css',
           'css/materia-unresponsive.min.css': 'css/materia-unresponsive.dev.css',
         }
